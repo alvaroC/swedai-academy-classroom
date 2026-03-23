@@ -594,6 +594,10 @@
     width: 100%;
 }
 
+.lp-hub-grid-adjust {
+    grid-template-columns: 0.9fr 1.1fr; /* Wider text column, narrower image column */
+}
+
 .lp-hub-text {
     display: flex;
     flex-direction: column;
@@ -603,7 +607,7 @@
 .lp-hub-text .lp-hub-lead {
     margin: 0;
     max-width: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .lp-hub-visual {
