@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwedAI Academy – Classroom</title>
+    <meta name="description"
+        content="Gratis AI-kursmaterial från SwedAI Academy. Utforska kurser och bygg AI-förmåga – helt gratis, utan inloggning.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Markmap (mindmaps) -->
+    <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.16"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- ======================== LANDING / ENTRY PAGE ======================== -->
+    <div id="loading-screen">
+
+        <!-- ── Floating background particles ── -->
+        <div class="lp-bg-orb lp-orb-1"></div>
+        <div class="lp-bg-orb lp-orb-2"></div>
+        <div class="lp-bg-orb lp-orb-3"></div>
+
+        <!-- ── HERO SECTION (dark) ── -->
+        <section class="lp-hero">
+            <div class="lp-hero-inner">
+                <div class="lp-badge-row">
+                    <span class="lp-badge">🎓 SwedAI Academy</span>
+                    <span class="lp-badge lp-badge-green">✅ 100% Gratis</span>
+                    <span class="lp-badge lp-badge-blue">🔓 Inget konto krävs</span>
+                </div>
+
+                <h1 class="lp-hero-title">
+                    Bli AI-proffs med<br>
+                    <span class="lp-gradient-text">ChatGPT Mastery Program</span>
+                </h1>
+
+                <p class="lp-hero-lead">
+                    Lär dig ChatGPT-ekosystemet gratis och ligga före<br>
+                    <strong>90&nbsp;% av alla AI-användare.</strong>
+                </p>
+
+            </div>
+        </section>
+
+        <!-- ── PROBLEM / INTRO SECTION (light) ── -->
+        <section class="lp-intro">
+            <div class="lp-content-wrap lp-content-wide">
+                <div class="lp-intro-grid">
+                    <div class="lp-intro-text">
+                        <span class="lp-section-tag">Varför ChatGPT Mastery?</span>
+                        <h2 class="lp-section-h2">Du utnyttjar bara en bråkdel av potentialen</h2>
+
+                        <p> Du kan inte bli AI-proffs utan fokus. Problemet är bara: <strong>vad ska
+                                du fokusera på?</strong> AI har blivit stort. Du kanske använder ChatGPT – men utnyttjar
+                            bara en bråkdel av potentialen. Och det är inte ditt fel.</p> </br>
+
+                        <p>Ingen har tid att själv utforska ett <strong>komplext och snabbt växande
+                                AI-ekosystem</strong>. Därför har vi skapat ChatGPT Mastery Program – ett
+                            <strong>8-stegs system</strong> (se bilden till höger) som visar hur OpenAI faktiskt tänker
+                            att AI ska användas. Vi har gjort jobbet åt dig. Du får ett <strong>tydligt system för att
+                                förstå, använda och bemästra ChatGPT-ekosystemet.</strong>
+                        </p>
+                    </div>
+                    <div class="lp-intro-visual">
+                        <figure>
+                            <img src="assets/ui/Infografik.png" alt="ChatGPT Ecosystem Illustration"
+                                class="lp-intro-img">
+                            <figcaption class="lp-figcaption"><strong>Intro AI, Prompt Engineering, Deep Research,
+                                    Agentläge, GPTs, Agent Builder, Appar, Atlas</strong></figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lp-hub">
+            <div class="lp-content-wrap lp-content-wide">
+                <h2 class="lp-section-h2 lp-h2-light">AI Learning Hub</h2>
+                <div class="lp-hub-grid">
+                    <div class="lp-hub-visual">
+                        <p class="lp-hub-lead">Att få tillgång till <strong>ChatGPT-ekosystemet</strong> är i sig redan
+                            extremt värdefullt. Men det är bara halva värdet. Den andra halvan är
+                            <strong>AI Learning Hub:</strong> ett innovativt sätt att bedriva
+                            undervisningen och inlärningen (titta på videon nedan).
+                        </p>
+                        </br></br>
+
+                        <!-- Video embed -->
+                        <div class="lp-video-wrap">
+                            <!-- Custom Placeholder Thumbnail -->
+                            <div id="video-placeholder" class="lp-video-placeholder" onclick="playVideo()"
+                                style="background-image: url('assets/ui/ChatGPT-ALH.png'); background-size: cover; background-position: center;">
+                                <div class="lp-play-btn"><i class="fas fa-play"></i></div>
+                                <span class="lp-video-label">Klicka för att spela video</span>
+                            </div>
+
+                            <!-- YouTube Video Iframe (hidden by default) -->
+                            <iframe id="video-iframe" class="lp-video-player" style="display:none;"
+                                src="https://www.youtube.com/embed/ua3r5NjPBeg?si=2YqSLH5c8Zh2TPBB"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+
+                        <!-- Video toggle script -->
+                        <script>
+                            function playVideo() {
+                                document.getElementById('video-placeholder').style.display = 'none';
+                                const iframe = document.getElementById('video-iframe');
+                                iframe.style.display = 'block';
+                                iframe.src += "&autoplay=1";
+                            }
+                        </script>
+                    </div>
+                    <div class="lp-hub-text">
+
+                        <p class="lp-hub-lead">AI Learning Hub flyttar kunskap hela vägen fram till handling.
+                            Genom <strong>AI-mentorer</strong> och <strong>AI artefakter</strong> får användaren stöd i
+                            stunden, där relevant kunskap
+                            omsätts till konkreta steg i en verklig arbetssituation. På så sätt minskar glappet mellan
+                            att förstå något och att faktiskt göra det. </p>
+
+                        <p class="lp-hub-lead">AI Learning Hub gör kunskap körbar. Resultatet är ett nytt sätt att
+                            arbeta där rätt kunskap finns tillgänglig vid rätt tidpunkt, i rätt format och direkt
+                            kopplad till handling</p>
+
+                        <p class="lp-hub-lead">Det är detta som gör ChatGPT Mastery Program unikt. De
+                            flesta onlineutbildningar erbjuder enbart videokurser. Du tittar på lektioner – och sedan är
+                            utbildningen slut. AI Learning Hub fungerar annorlunda. Här sker inlärningen genom flera
+                            nivåer som kompletterar
+                            varandra.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── FINAL CTA SECTION (gradient) ── -->
+        <section class="lp-cta-section">
+            <div class="lp-content-wrap lp-cta-inner">
+
+                <h2 class="lp-cta-title">Lär dig ChatGPT-ekosystemet gratis</h2>
+                <p class="lp-cta-lead">Nu är det din tur att upptäcka <strong>ChatGPT-ekosystemet och AI Learning
+                        Hub</strong>. Du får en unik möjlighet att lära dig ChatGPT ekosystemet och ligga före 90&nbsp;%
+                    av alla AI-användare. Det bästa av allt: <strong>Det är helt gratis</strong>. </br>
+                    Börja med <strong>Classroom</strong>: klicka på knappen nedan</p>
+            </div></br>
+
+            <!-- Material pills -->
+            <div class="lp-mat-pills">
+                <span>🎙️ Podcasts</span><span>🎥 Videos</span><span>📽️ Presentationer</span>
+                <span>📊 Infographics</span><span>🃏 Flashcards</span><span>📝 Quiz</span>
+            </div></br>
+
+            <div class="lp-cta-btn">
+                <button id="enter-btn" class="lp-enter-btn lp-enter-btn-big" onclick="enterClassroom()">
+                    <span>Öppna Classroom – Helt gratis</span>
+                    <i class="fas fa-rocket"></i>
+                </button>
+                <p class="lp-hero-note">Inget kreditkort. Ingen registrering. Börja direkt.</p>
+            </div>
+    </div>
+    </section>
+
+    </div>
+
+    <!-- ======================== CLASSROOM ======================== -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="header-brand">
+                <span class="brand-logo">📚</span>
+                <div class="brand-text">
+                    <h1>SwedAI Academy</h1>
+                    <span class="brand-tag">Classroom – Gratis Kursmaterial</span>
+                </div>
+            </div>
+            <a href="https://sweai.academy" target="_blank" class="cta-header-btn">
+                <i class="fas fa-rocket"></i>
+                Uppgradera till Full Access
+            </a>
+        </div>
+    </header>
+
+    <!-- ======================== INTRO TEXT ======================== -->
+    <section class="classroom-intro">
+        <div class="intro-container">
+            <h2 class="intro-title">VÄLKOMMEN TILL SWEDAI ACADEMY – GRATIS UTBILDNING</h2>
+            <div class="intro-text">
+                <p><strong>ChatGPT Mastery Program</strong> består av <strong>sex nivåer</strong>. Du
+                    får <strong>full tillgång till nivå 1</strong> samt <strong>delar av nivå 6</strong> helt gratis.
+                    Efter dessa lektioner kommer du att förstå mer om AI och ChatGPT än de flesta användare idag. Börja
+                    här med <strong>Classroom</strong>: Välj <strong>Course</strong> – och sedan
+                    <strong>kursmaterialet</strong> (Podcast)
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== TWO-COLUMN MAIN ======================== -->
+    <main class="two-col-grid">
+
+        <!-- ======================================================
+             LEFT COLUMN: CLASSROOM (light theme)
+             ====================================================== -->
+        <div class="col-classroom">
+
+            <!-- Green header -->
+            <div class="panel-header lvl-classroom">
+                <span class="nivel-badge">NIVÅ 1</span>
+                <div class="panel-header-icon">📚</div>
+                <h2 class="panel-title">CLASSROOM</h2>
+                <p class="panel-desc">Utforska kursmaterial och kunskapsbanken</p>
+            </div>
+
+            <!-- Select Course -->
+            <div class="light-control-box">
+                <div class="control-row">
+                    <span class="control-icon icon-pink">🎓</span>
+                    <h3 class="light-control-label">Select Course</h3>
+                </div>
+                <select class="light-select" id="course-selector" onchange="selectCourse(this.value)">
+                    <option value="chatgpt-mastery">Introduktion till ChatGPT Mastery Program</option>
+                    <option value="intro-ai">Introduktion till AI</option>
+                    <option value="prompt-eng">ChatGPT Prompt Engineering</option>
+                    <option value="deep-research">ChatGPT Deep Research</option>
+                    <option value="agent-läge">ChatGPT Agentläge</option>
+                    <option value="gpt">Skapa GPTs</option>
+                    <option value="agent-builder">ChatGPT Agent Builder</option>
+                </select>
+            </div>
+
+            <!-- Course Material -->
+            <div class="light-control-box" style="margin-top:1.25rem;">
+                <div class="control-row">
+                    <span class="control-icon icon-orange">📂</span>
+                    <h3 class="light-control-label">Course Material: <span id="active-course-name">Introduktion till
+                            AI</span></h3>
+                </div>
+                <select class="light-select" id="content-filter-dropdown" onchange="filterGallery(this.value)">
+                    <option value="all">Show All Material</option>
+                    <option value="podcast">🎙️ Podcast</option>
+                    <option value="video">🎥 Video</option>
+                    <option value="presentation">📽️ Presentation</option>
+                    <option value="infographic">📊 Infographics</option>
+                    <option value="report">📝 Rapport</option>
+                    <option value="flashcards">🃏 Flashcards</option>
+                    <option value="quiz">📝 Quiz</option>
+                </select>
+            </div>
+
+            <!-- Gallery / Welcome message -->
+            <div id="gallery-grid" class="classroom-gallery">
+                <div class="light-welcome-msg">
+                    <span style="font-size:1.6rem;">👋</span>
+                    <strong id="welcome-course-name">Välkommen till ChatGPT Mastey Program</strong>
+                    <span>Välj ett material i menyn ovan för att börja.</span>
+                    <a href="updates.html"
+                        style="display: inline-block; margin-top: 30px; padding: 10px 30px; border: 2px solid rgba(16, 185, 129, 0.4); border-radius: 50px; background: rgba(16, 185, 129, 0.15); color: rgb(16, 185, 129); font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; text-decoration: none; transition: 0.2s; transform: none;"
+                        onmouseover="this.style.backgroundColor='rgba(16, 185, 129, 0.25)'; this.style.borderColor='rgba(16, 185, 129, 0.6)'; this.style.transform='translateY(-1px)';"
+                        onmouseout="this.style.backgroundColor='rgba(16, 185, 129, 0.15)'; this.style.borderColor='rgba(16, 185, 129, 0.4)'; this.style.transform='none';">
+                        Uppdateringar: nya kurser
+                    </a>
+                </div>
+
+            </div>
+
+        </div><!-- /col-classroom -->
+
+
+        <!-- ======================================================
+             RIGHT COLUMN: BYGG AI FÖRMÅGA (dark theme)
+             ====================================================== -->
+        <div class="col-bygg">
+
+            <!-- Blue header -->
+            <div class="panel-header lvl-bygg">
+                <span class="nivel-badge">NIVÅ 6</span>
+                <div class="panel-header-icon">📚</div>
+                <h2 class="panel-title">HUR MAN BYGG AI FÖRMÅGA</h2>
+                <p class="panel-desc">Lär dig kompetenserna som skapar värde för en AI-Konsult</p>
+            </div>
+
+            <!-- Audio Bar -->
+            <div id="main-audio-bar" class="audio-bar"
+                onclick="toggleMainAudio(this, 'assets/media/audio/bygg-ai-audio.m4a')">
+                <i class="fas fa-play"></i> AUDIO
+                <p style="color: red;">Börja med att lyssna på detta podcast</p>
+            </div>
+
+            <!-- Select Kompetens -->
+            <div class="dark-control-box">
+                <div class="control-row">
+                    <span class="control-icon icon-pink">🎓</span>
+                    <h3 class="dark-control-label">Select Competence</h3>
+                </div>
+                <select class="dark-select" id="bygg-course-selector" onchange="selectByggCourse(this.value)">
+                    <option value="system-processer">System och processer</option>
+                    <option value="informationslager">Informationslager</option>
+                    <option value="growth-marketing">Growth Marketing</option>
+                </select>
+            </div>
+
+            <!-- Select Material -->
+            <div class="dark-control-box" style="margin-top:1.25rem;">
+                <div class="control-row">
+                    <span class="control-icon icon-orange">📂</span>
+                    <h3 class="dark-control-label">Select Material</h3>
+                </div>
+                <select class="dark-select" id="bygg-filter-dropdown" onchange="filterByggGallery(this.value)">
+                    <option value="all">All Material</option>
+                    <option value="podcast">🎙️ Podcast</option>
+                    <option value="video">🎥 Video</option>
+                    <option value="presentation">📽️ Presentation</option>
+                    <option value="report">📝 E-Book</option>
+
+                </select>
+            </div>
+
+            <!-- Welcome / Gallery -->
+            <div id="bygg-gallery" class="bygg-gallery">
+                <div class="dark-welcome-msg">
+                    <span style="font-size:1.6rem;">👋</span>
+                    <span style="color:forestgreen"> <i class="fas fa-robot" style="color: #a78bfa;"></i><strong> TESTA
+                            HUR DU KAN SYSTEMATISERA DIN VERKSMAHET</strong></span>
+                    <a href="https://chatgpt.com/g/g-67d6b949ca388191aa046789af8e5009-prio-processer-analysator"
+                        target="_blank" class="res-gpt-link-btn">
+                        <span class="res-gpt-icon-wrap">
+                            <i class="fas fa-robot"></i>
+                        </span>
+                        <span class="res-pdf-btn-text">
+                            <strong>Öppna GPT</strong>
+                            <small>Behovs-Analysator</small>
+                        </span>
+
+                        <i class="fas fa-external-link-alt res-pdf-arrow" style="color: #34d399;"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div><!-- /col-bygg -->
+
+
+    </main>
+
+    <!-- ======================== FOOTER ======================== -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <span>📚 <strong>SwedAI Academy Classroom</strong> – Gratis kursmaterial</span>
+            <span>•</span>
+            <a href="https://sweai.academy" target="_blank">Full Access – Lås upp allt →</a>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox-overlay" style="display:none;"></div>
+
+    <!-- Data & Logic -->
+    <script src="js/data.js"></script>
+    <script src="js/supabase-client.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        function enterClassroom() {
+            const btn = document.getElementById('enter-btn');
+            btn.disabled = true;
+            btn.innerHTML = '<span>Laddar...</span><i class="fas fa-spinner fa-spin"></i>';
+            const screen = document.getElementById('loading-screen');
+            setTimeout(function () {
+                screen.classList.add('loading-hidden');
+                setTimeout(function () { screen.style.display = 'none'; }, 600);
+            }, 400);
+        }
+    </script>
+
+
+</body>
+
+</html>

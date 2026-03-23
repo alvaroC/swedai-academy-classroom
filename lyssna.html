@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyssna – SwedAI Academy</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-dark: #090e1a;
+            --main-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --accent-red: #D91B24;
+            --accent-glow: rgba(217, 27, 36, 0.4);
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --text-primary: #ffffff;
+            --text-secondary: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            background-image: var(--main-gradient);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Ambient Background Effects */
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 0;
+            opacity: 0.4;
+            animation: float 10s infinite alternate ease-in-out;
+        }
+
+        .orb-1 { width: 400px; height: 400px; background: #1e3a8a; top: -100px; left: -100px; }
+        .orb-2 { width: 300px; height: 300px; background: var(--accent-red); bottom: -50px; right: -50px; animation-delay: -3s; }
+
+        @keyframes float {
+            0% { transform: translateY(0) scale(1); }
+            100% { transform: translateY(20px) scale(1.05); }
+        }
+
+        /* Player Card */
+        .player-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            width: 90%;
+            max-width: 420px;
+            padding: 32px;
+            text-align: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            z-index: 10;
+            position: relative;
+        }
+
+        .logo-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+        .logo-icon { font-size: 1.5rem; }
+        .logo-text { font-weight: 800; font-size: 1.1rem; letter-spacing: 0.5px; }
+
+        /* Cover Visualizer Mock */
+        .cover-arts {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+            border: 2px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+        .cover-icon { font-size: 3rem; color: var(--accent-red); }
+
+        .title { font-size: 1.35rem; font-weight: 800; margin-bottom: 6px; }
+        .subtitle { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 32px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+        /* Custom Audio Controls */
+        .bar-visualizer {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 4px;
+            height: 30px;
+            margin-bottom: 24px;
+        }
+        .visual-bar {
+            width: 5px;
+            height: 15%;
+            background: var(--text-secondary);
+            border-radius: 2px;
+            transition: 0.2s;
+        }
+        /* Active playing animation classes to be toggled by JS */
+        .playing .visual-bar {
+             background: var(--accent-red);
+             animation: bounce 1.2s infinite ease-in-out;
+        }
+        .playing .visual-bar:nth-child(2n) { animation-delay: 0.2s; }
+        .playing .visual-bar:nth-child(3n) { animation-delay: 0.4s; }
+        .playing .visual-bar:nth-child(4n) { animation-delay: 0.1s; }
+        
+        @keyframes bounce {
+            0%, 100% { height: 10%; }
+            50% { height: 80%; }
+        }
+
+        /* Timeline & Progress */
+        .timeline-container { margin-bottom: 30px; }
+        .timeline-bar {
+            background: rgba(255,255,255,0.1);
+            height: 6px;
+            border-radius: 3px;
+            width: 100%;
+            cursor: pointer;
+            position: relative;
+        }
+        .progress-filled {
+            height: 100%;
+            background: var(--accent-red);
+            border-radius: 3px;
+            width: 0%; /* Dynamic */
+            box-shadow: 0 0 10px var(--accent-glow);
+            position: relative;
+        }
+        .time-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            margin-top: 8px;
+        }
+
+        /* Buttons */
+        .controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+        .control-btn {
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            cursor: pointer;
+            font-size: 1.25rem;
+            transition: 0.2s;
+        }
+        .play-btn {
+            width: 56px;
+            height: 56px;
+            background: var(--accent-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px var(--accent-glow);
+        }
+        .play-btn:hover { transform: scale(1.05); }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            border: 1px solid var(--glass-border);
+            padding: 8px 16px;
+            border-radius: 30px;
+            transition: 0.2s;
+        }
+        .back-btn:hover { background: rgba(255,255,255,0.05); color: #fff; }
+
+    </style>
+</head>
+<body>
+    
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <div class="player-card">
+        <div class="logo-wrap">
+            <span class="logo-icon">📚</span>
+            <span class="logo-text">SwedAI Academy</span>
+        </div>
+
+        <div class="cover-arts">
+            <i class="fas fa-podcast cover-icon"></i>
+        </div>
+
+        <h2 class="title">Bygg AI-förmåga</h2>
+        <p class="subtitle">Nivå 6 - ChatGPT Mastery Program</p>
+
+        <!-- Dynamic Visualizer bar container -->
+        <div class="bar-visualizer" id="visualizer">
+            <div class="visual-bar"></div><div class="visual-bar"></div><div class="visual-bar"></div>
+            <div class="visual-bar"></div><div class="visual-bar"></div><div class="visual-bar"></div>
+            <div class="visual-bar"></div><div class="visual-bar"></div><div class="visual-bar"></div>
+        </div>
+
+        <!-- Hidden Native Audio Node -->
+        <audio id="audio-node" src="assets/media/audio/bygg-ai-audio.m4a"></audio>
+
+        <div class="timeline-container">
+            <div class="timeline-bar" id="timeline">
+                <div class="progress-filled" id="progress"></div>
+            </div>
+            <div class="time-labels">
+                <span id="current-time">0:00</span>
+                <span id="duration">...</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="control-btn" id="rewind-btn"><i class="fas fa-undo"></i></button>
+            <button class="control-btn play-btn" id="toggle-play"><i class="fas fa-play" id="play-icon"></i></button>
+            <button class="control-btn" id="forward-btn"><i class="fas fa-redo"></i></button>
+        </div>
+
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Tillbaka till Classroom</a>
+    </div>
+
+    <!-- Script to connect controls with native audio -->
+    <script>
+        const audio = document.getElementById('audio-node');
+        const playBtn = document.getElementById('toggle-play');
+        const playIcon = document.getElementById('play-icon');
+        const progress = document.getElementById('progress');
+        const timeline = document.getElementById('timeline');
+        const currentTimeEl = document.getElementById('current-time');
+        const durationEl = document.getElementById('duration');
+        const visualizer = document.getElementById('visualizer');
+        const rewindBtn = document.getElementById('rewind-btn');
+        const forwardBtn = document.getElementById('forward-btn');
+
+        // Play/Pause
+        playBtn.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                playIcon.className = 'fas fa-pause';
+                visualizer.classList.add('playing');
+            } else {
+                audio.pause();
+                playIcon.className = 'fas fa-play';
+                visualizer.classList.remove('playing');
+            }
+        });
+
+        // Format times
+        function formatTime(secs) {
+            let minutes = Math.floor(secs / 60);
+            let seconds = Math.floor(secs % 60);
+            if (seconds < 10) seconds = `0${seconds}`;
+            return `${minutes}:${seconds}`;
+        }
+
+        // Duration load
+        audio.addEventListener('loadedmetadata', () => {
+            durationEl.innerText = formatTime(audio.duration);
+        });
+
+        // Fallback for duration if loadedmetadata fires early
+        setInterval(() => {
+            if (audio.duration && durationEl.innerText === "...") {
+                durationEl.innerText = formatTime(audio.duration);
+            }
+        }, 500);
+
+        // Time updates
+        audio.addEventListener('timeupdate', () => {
+            const percent = (audio.currentTime / audio.duration) * 100;
+            progress.style.width = `${percent}%`;
+            currentTimeEl.innerText = formatTime(audio.currentTime);
+        });
+
+        // Scrubbing/Click on track
+        timeline.addEventListener('click', (e) => {
+            const width = timeline.clientWidth;
+            const clickX = e.offsetX;
+            const duration = audio.duration;
+            audio.currentTime = (clickX / width) * duration;
+        });
+
+        // Rewind & Forward (10 sec)
+        rewindBtn.addEventListener('click', () => { audio.currentTime = Math.max(0, audio.currentTime - 10); });
+        forwardBtn.addEventListener('click', () => { audio.currentTime = Math.min(audio.duration, audio.currentTime + 10); });
+
+        // Reset on End
+        audio.addEventListener('ended', () => {
+            playIcon.className = 'fas fa-play';
+            visualizer.classList.remove('playing');
+            progress.style.width = '0%';
+        });
+    </script>
+</body>
+</html>

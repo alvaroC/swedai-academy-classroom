@@ -1,0 +1,16 @@
+# OS Files
+.DS_Store
+Thumbs.db
+Thumbs.db:encryptable
+
+# Supabase
+supabase/.temp/
+
+# Node (in case you use it later)
+node_modules/
+.npm
+.env
+.env.*
+
+# Logs
+*.log
