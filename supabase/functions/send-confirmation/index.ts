@@ -113,7 +113,7 @@ function buildEmailHtml(email: string): string {
                             <table width="100%" cellpadding="0" cellspacing="0" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:20px;margin:24px 0;width:100%;max-width:100%;">
                                 <tr>
                                     <td width="48" style="vertical-align:middle;">
-                                        <a href="https://swedaiacademy.se/lyssna.html" target="_blank" style="display:inline-block;width:48px;height:48px;background:#D91B24;border-radius:50%;text-align:center;text-decoration:none;">
+                                        <a href="https://swedai-academy-classroom.vercel.app/lyssna.html" target="_blank" style="display:inline-block;width:48px;height:48px;background:#D91B24;border-radius:50%;text-align:center;text-decoration:none;">
                                             <span style="display:inline-block;margin:13px 0 0 3px;font-size:1rem;color:white;">▶</span>
                                         </a>
                                     </td>
