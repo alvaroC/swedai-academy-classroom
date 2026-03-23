@@ -563,6 +563,60 @@
 /* ═══════════════════════════════════
    AI LEARNING HUB SECTION (dark)
 ═══════════════════════════════════ */
+/* Landing Page Navbar */
+.lp-navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.lp-nav-brand {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.lp-nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.lp-nav-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.lp-nav-link:hover {
+    color: white;
+}
+
+.lp-nav-link.active {
+    color: #34d399;
+}
+
+@media (max-width: 600px) {
+    .lp-navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding-top: 1rem;
+    }
+}
+
 .lp-hub {
     background: linear-gradient(160deg, #0f172a 0%, #1a2540 50%, #0d1b35 100%);
     padding: 2.5rem 0 5rem;
