@@ -1,0 +1,34 @@
+window1.notebookData = {
+  "ai-models": {
+    "chatgpt": {
+      "title": "AI Model: ChatGPT",
+      "courses": {
+        "chatgpt-mastery": {
+          "video": {
+            "title": "ChatGPT Mastery Program"
+          }
+        },
+        "intro-ai": {
+          "video": {
+            "title": "Introduktion till AI"
+          }
+        }
+      }
+    },
+    "claude": {
+      "title": "AI Model: Claude",
+      "courses": {
+        "claude-1": {
+          "video": {
+            "title": "Claude Kurs 1"
+          }
+        },
+        "claude-2": {
+          "video": {
+            "title": "Claude Kurs 2"
+          }
+        }
+      }
+    }
+  }
+};

@@ -378,7 +378,7 @@
 
 .lp-intro-grid {
     display: grid;
-    grid-template-columns: 1fr 1.3fr;
+    grid-template-columns: 1.2fr 1.2fr;
     gap: 4rem;
     align-items: center;
     max-width: 1250px;
@@ -628,7 +628,7 @@
 
 .lp-hub .lp-section-h2 {
     margin-top: 0;
-    margin-bottom: 2.5rem;
+    margin-bottom: 0.5rem;
 }
 
 
@@ -636,7 +636,7 @@
     display: flex;
     flex-direction: column;
     /* align-items: center; Removed for grid support */
-    gap: 2rem;
+    gap: 1.25rem;
 }
 
 .lp-hub-grid {
@@ -649,7 +649,8 @@
 }
 
 .lp-hub-grid-adjust {
-    grid-template-columns: 0.9fr 1.1fr; /* Wider text column, narrower image column */
+    grid-template-columns: 0.9fr 1.1fr;
+    /* Wider text column, narrower image column */
 }
 
 .lp-hub-text {
@@ -674,12 +675,23 @@
     font-size: 1.0rem;
     color: rgba(255, 255, 255, 0.55);
     line-height: 1.7;
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
+    text-align: left;
 }
 
 .lp-hub-lead strong {
     color: rgba(255, 255, 255, 0.85);
+}
+
+.lp-hub-fig {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    text-align: center;
+    color: orangered;
+    line-height: 1.7;
+    max-width: 100%;
+    margin: 0;
 }
 
 /* 3-pillar flow */
@@ -1010,18 +1022,70 @@ h3 {
 .intro-container {
     max-width: 800px;
     margin: 0 auto;
+    position: relative;
+}
+
+.updates-link-btn {
+    position: absolute;
+    left: -320px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.9rem 1.8rem;
+    background: linear-gradient(135deg, #f43f5e 0%, #ec4899 100%);
+    border: none;
+    border-radius: 999px;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 8px 25px rgba(244, 63, 94, 0.35);
+}
+
+.updates-link-btn:hover {
+    background: linear-gradient(135deg, #e11d48 0%, #be185d 100%);
+    color: white;
+    box-shadow: 0 12px 30px rgba(244, 63, 94, 0.45);
+    transform: translateY(calc(-50% - 3px)) scale(1.02);
+}
+
+@media (max-width: 1400px) {
+    .updates-link-btn {
+        position: static;
+        transform: none;
+        margin-bottom: 2.5rem;
+    }
+
+    .updates-link-btn:hover {
+        transform: translateY(-3px) scale(1.02);
+    }
 }
 
 .intro-title {
     font-family: 'Outfit', sans-serif;
     font-size: 1.7rem;
-    /* Något mindre för mer elegans */
-    font-weight: 700;
-    color: #1a365d;
-    margin-bottom: 1.2rem;
+    font-weight: 800;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
     letter-spacing: -0.5px;
     text-transform: uppercase;
-    line-height: 1.2;
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+@media (max-width: 850px) {
+    .intro-title {
+        white-space: normal;
+        font-size: 1.4rem;
+    }
 }
 
 .intro-text p {
@@ -1058,8 +1122,24 @@ h3 {
     box-sizing: border-box;
 }
 
+.bygg-split-grid {
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    gap: 2rem;
+    max-width: 1600px;
+    width: calc(100% - 6rem);
+    margin: 0 auto 2rem auto;
+    align-items: start;
+    box-sizing: border-box;
+}
+
 @media (max-width: 900px) {
     .two-col-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .bygg-split-grid {
         grid-template-columns: 1fr;
         padding: 0 1rem;
     }
@@ -1084,7 +1164,7 @@ h3 {
    ============================================ */
 
 .col-bygg {
-    background: #0f172a;
+    background: #0a0f1e;
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -1094,8 +1174,27 @@ h3 {
 }
 
 /* ============================================
-   PANEL HEADERS
+   PANEL HEADERS & SECTION TITLES
    ============================================ */
+
+.classroom-section-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin: 2.0rem auto 1.5rem;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    position: relative;
+}
+
+.classroom-section-title span {
+    background: linear-gradient(135deg, #2563eb 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 .panel-header {
     text-align: center;
@@ -1118,8 +1217,14 @@ h3 {
     box-shadow: 0 4px 20px rgba(59, 130, 246, 0.25);
 }
 
+.panel-header.lvl-bygg-alt {
+    background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+    color: white;
+    box-shadow: 0 4px 20px rgba(124, 58, 237, 0.25);
+}
+
 .audio-bar {
-    background: #000000;
+    background: #000;
     color: white;
     padding: 0.5rem 2.8rem;
     border: 2px solid #1a1a1a;
@@ -1155,6 +1260,27 @@ h3 {
     background: #000;
     box-shadow: 0 0 15px rgba(37, 99, 235, 0.4);
     animation: pulseGlow 2s infinite;
+}
+
+.video-bar {
+    background: #ffffff;
+    color: #000;
+    padding: 0.5rem 2.8rem;
+    border: 2px solid #1a1a1a;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 0 auto 1.75rem auto;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    align-self: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
 }
 
 @keyframes pulseGlow {

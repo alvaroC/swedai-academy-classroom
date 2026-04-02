@@ -1,0 +1,326 @@
+{
+    "title": "Claude",
+    "description": "Interaktiva kort som täcker Claude och dess ekosystem.",
+    "cards": [
+        {
+            "q": "Vem grundade företaget Anthropic?",
+            "a": "Dario Amodei (tidigare innovationschef på OpenAI)"
+        },
+        {
+            "q": "Vilket kärnfokus skiljer Anthropic från många andra AI-företag enligt kursmaterialet?",
+            "a": "Ett kompromisslöst fokus på säkerhet och AI-etik."
+        },
+        {
+            "q": "Vilken händelse år 2025 stärkte Anthropics rykte hos integritetsmedvetna användare?",
+            "a": "De vägrade ta bort säkerhetsspärrar för amerikanska militära operationer."
+        },
+        {
+            "q": "Nämn de tre huvudmodellerna i Claude-familjen.",
+            "a": "Haiku, Sonnet och Opus."
+        },
+        {
+            "q": "Vilken Claude-modell är mest lämpad för snabba och kostnadseffektiva uppgifter som textkategorisering?",
+            "a": "Claude Haiku."
+        },
+        {
+            "q": "Vilken modell beskrivs som den optimala balansen mellan intelligens och hastighet för dagligt arbete?",
+            "a": "Claude Sonnet."
+        },
+        {
+            "q": "Vilken är den mest kraftfulla modellen för avancerad problemlösning och komplex analys?",
+            "a": "Claude Opus."
+        },
+        {
+            "q": "Vilken specifik förmåga saknar Claude medvetet till skillnad från flera konkurrenter?",
+            "a": "Inbyggd bildgenerering."
+        },
+        {
+            "q": "Vad är ett 'Project' i Claude-plattformen?",
+            "a": "En dedikerad och isolerad arbetsyta för en specifik uppgift eller kund."
+        },
+        {
+            "q": "Vad är den främsta fördelen med att använda ett Projekt istället för en vanlig chatt?",
+            "a": "Claude får ett beständigt minne och en fast kontext för det specifika arbetet."
+        },
+        {
+            "q": "Hur skapar man en kunskapsbas inom ett Claude-projekt?",
+            "a": "Genom att ladda upp relevanta referensfiler som PDF, DOCX eller CSV."
+        },
+        {
+            "q": "Varför är det viktigt att ge filer tydliga namn när de laddas upp till ett projekt?",
+            "a": "Claude använder filnamnen för att förstå innehållet och hämta rätt information."
+        },
+        {
+            "q": "Vilken funktion aktiveras automatiskt när ett projekts kunskapsbas närmar sig kontextfönstrets gräns?",
+            "a": "RAG-läge (Retrieval Augmented Generation)"
+        },
+        {
+            "q": "Vad syftar 'Project Instructions' till?",
+            "a": "Att definiera ton, expertisnivå och specifika krav för alla konversationer i projektet."
+        },
+        {
+            "q": "Vilka licenser krävs för att kunna dela projekt med kollegor?",
+            "a": "Claude for Work (Team eller Enterprise)."
+        },
+        {
+            "q": "Vilken behörighetsnivå i ett projekt tillåter användare att chatta men inte ändra filer?",
+            "a": "Can view (Kan visa)."
+        },
+        {
+            "q": "Vad är 'Artifacts' i Claudes gränssnitt?",
+            "a": "En sidopanel som visar visuella resultat som kod, dokument eller interaktiva gränssnitt."
+        },
+        {
+            "q": "Vad innebär det att Claude 'renderar' en Artifact?",
+            "a": "Att den ritar upp och gör resultatet (t.ex. en webbsida) klickbart och interaktivt direkt."
+        },
+        {
+            "q": "Ge exempel på Artifacts",
+            "a": "Dokument, Kodavsnitt, HTML-sidor, SVG-bilder, Mermaid-diagram, React-komponenter"
+        },
+        {
+            "q": "Hur kan man dela en färdig Artifact med någon som inte har ett Claude-konto?",
+            "a": "Genom att klicka på 'Publish' för att skapa en offentlig webblänk."
+        },
+        {
+            "q": "Vad är en 'Skill' (kapacitet) i Claude?",
+            "a": "Ett paket med instruktioner och resurser för att utföra specifika, repetitiva uppgifter."
+        },
+        {
+            "q": "Vilka typer av Skills finns det?",
+            "a": "Det finns två huvudkategorier av Skills i Claude: Anthropic Skills och Custom Skills."
+        },
+        {
+            "q": "Vad är skillnaden mellan Anthropic Skills och Custom Skills?",
+            "a": "Anthropic Skills är inbyggda funktioner för att skapa filer som Excel, Word och PowerPoint. Custom Skills är anpassade färdigheter som skapas av användaren."
+        },
+        {
+            "q": "Vad är den principiella skillnaden mellan en Skill och ett Projekt?",
+            "a": "Skills är en bärbar verktygslåda som följer med i alla chattar, projekt är isolerade rum."
+        },
+        {
+            "q": "Vilken inställning måste vara aktiverad för att kunna använda Skills?",
+            "a": "Code execution and file creation (Kodexekvering och filskapande)."
+        },
+        {
+            "q": "Vad kännetecknar 'Anthropic Skills'?",
+            "a": "De är inbyggda funktioner för att skapa filer som Excel, Word och PowerPoint."
+        },
+        {
+            "q": "Kan man använda Skills inom ett Projekt?",
+            "a": "Projekt och Skilsl hanterar olika delar av ett arbetsflöde och fungerar bäst när de kombineras. Projektet fungerar som en kunskapshubb som tillhandahåller själva informationen, medan  Skills fungerar som en processmotor som definierar metoden"
+        },
+        {
+            "q": "Kan man använda Artifacts  inom ett Projekt?",
+            "a": "När du chattar inuti ditt projekt can du be Claude att skapa något komplext och fristående, dvs. en Artifact"
+        },
+        {
+            "q": "Hur kan man skapa en 'Custom Skill' genom konversation?",
+            "a": "Genom att be Claude göra om ett lyckat chattresultat till ett återanvändbart verktyg."
+        },
+        {
+            "q": "Vilket protokoll möjliggör säkra anslutningar mellan Claude och externa tjänster?",
+            "a": "Model Context Protocol (MCP)."
+        },
+        {
+            "q": "Vad gör funktionen 'Research Mode' (Deep research)?",
+            "a": "Den utför systematiska flerstegsundersökningar på webben och skapar källhänvisade rapporter."
+        },
+        {
+            "q": "Hur lång tid tar vanligtvis en utredning i Research Mode?",
+            "a": "Mellan 5 och 45 minuter."
+        },
+        {
+            "q": "Vad är 'Extended Thinking' i samband med Research Mode?",
+            "a": "En funktion där Claude planerar sin strategi och bryter ner komplexa frågor innan sökning."
+        },
+        {
+            "q": "Vilken roll spelar citat i Research Mode-rapporter?",
+            "a": "De gör det enkelt för användaren att verifiera fakta och hitta originalkällorna."
+        },
+        {
+            "q": "Vad är 'Connectors' (integreringar) i Claude-ekosystemet?",
+            "a": "Digitala bryggor till tjänster som Google Drive, Slack, Notion och Gmail."
+        },
+        {
+            "q": "Vilka typer av Connectors finns det?",
+            "a": "Det finns två typer: Web Connectors (Webbintegreringar) och Desktop Extensions (Skrivbordstillägg)"
+        },
+        {
+            "q": "Vad är skillnaden mellan 'Web Connectors' och 'Desktop Extensions'?",
+            "a": "Web Connectors körs via webbaserade API:er och används för att koppla Claude till molntjänster och onlineapplikationer. Desktop Extensions kräver att du använder skrivbordsappen Claude Desktop och körs lokalt på din egen dator"
+        },
+        {
+            "q": "Vad är den främsta funktionen hos webbläsartillägget 'Claude in Chrome'?",
+            "a": "Att sammanfatta artiklar, hantera e-post och utföra enklare webbautomatisering."
+        },
+        {
+            "q": "Vad innebär 'RAG' (Retrieval Augmented Generation) för ett Projekt?",
+            "a": "Claude söker och hämtar endast den mest relevanta informationen istället för att ladda allt i minnet."
+        },
+        {
+            "q": "Vilken licens krävs för att få tillgång till 'Research' enligt kursmaterialet?",
+            "a": "Pro (eller högre betalplaner)."
+        },
+        {
+            "q": "Claude lagrar data i säkra _____ (sandlådor) när den exekverar kod.",
+            "a": "virtuella miljöer"
+        },
+        {
+            "q": "I ett projekt fungerar uppladdade filer som en skräddarsydd _____.",
+            "a": "kunskapsbas"
+        },
+        {
+            "q": "När Claude skapar en presentation direkt i PowerPoint används ett inbyggt _____.",
+            "a": "tillägg (add-in)"
+        },
+        {
+            "q": "Processen där Claude självständigt planerar och utför sökningar i flera vågor kallas _____.",
+            "a": "Research Mode"
+        },
+        {
+            "q": "Term: MCP",
+            "a": "Definition: Model Context Protocol, ett öppet protokoll för att ansluta AI-modeller till data och verktyg."
+        },
+        {
+            "q": "Term: Artifact",
+            "a": "Definition: Ett fönster för att visa och redigera innehåll som kod, webbsidor och dokument vid sidan av chatten."
+        },
+        {
+            "q": "Varför anses Claudes Skills vara mer dynamiska än ChatGPT:s Custom GPT:er?",
+            "a": "Claude känner själv av och aktiverar rätt Skill utan att användaren behöver välja den manuellt i förväg."
+        },
+        {
+            "q": "Vad är fördelen med att publicera en Artifact offentligt?",
+            "a": "Andra kan se och interagera med resultatet utan att ha ett eget Claude-konto."
+        },
+        {
+            "q": "Vilken typ av dokument är bäst lämpade för uppladdning i ett Projekt?",
+            "a": "Referensmaterial som varumärkesriktlinjer, policys och tekniska specifikationer."
+        },
+        {
+            "q": "Hur kan en säljare dra nytta av Projekt-funktionen?",
+            "a": "Genom att skapa en hubb för varje kund med deras specifika bakgrund och krav."
+        },
+        {
+            "q": "Vad är syftet med att använda 'Claude i Slack'?",
+            "a": "Att snabbt sammanfatta diskussionstrådar eller förbereda möten utan att lämna kommunikationsappen."
+        },
+        {
+            "q": "Vilken funktion i Claude in Chrome kan automatiskt 'avprenumerera' på nyhetsbrev?",
+            "a": "Webbläsarautomatisering (browser automation)."
+        },
+        {
+            "q": "Hur skiljer sig 'Web Connectors' från 'Desktop Extensions'?",
+            "a": "Web Connectors kommunicerar med molntjänster via API, Desktop Extensions körs lokalt på datorn."
+        },
+        {
+            "q": "Vilken betalplan erbjuder obegränsat antal projekt?",
+            "a": "Claude Pro."
+        },
+        {
+            "q": "Inom marknadsföring, hur kan 'Skills' användas för att spara tid?",
+            "a": "Genom att skapa verktyg som automatiskt anpassar ett blogginlägg till olika sociala medier."
+        },
+        {
+            "q": "Vem har högsta behörighet i ett delat projekt och kan hantera medlemmar?",
+            "a": "Owner (Ägaren)."
+        },
+        {
+            "q": "Vad kallas den funktion där användare kan ladda upp en .md-fil för att lära Claude ett arbetsflöde?",
+            "a": "Custom Skills (Anpassade kapaciteter)."
+        },
+        {
+            "q": "Varför är källhänvisningar centrala i Research Mode?",
+            "a": "De motverkar hallucinationer genom att binda varje påstående till en specifik källa."
+        },
+        {
+            "q": "Vad innebär 'Skill Creator'?",
+            "a": "En guidad process där Claude ställer frågor för att bygga ett skräddarsytt verktyg åt användaren."
+        },
+        {
+            "q": "Vilken Claude-modell drar mest resurser och är dyrast att använda?",
+            "a": "Claude Opus."
+        },
+        {
+            "q": "Vilket gränssnitt är bäst för tunga dataanalysuppgifter som kräver visualisering?",
+            "a": "Claude.ai med Artifacts aktiverat."
+        },
+        {
+            "q": "Hur fungerar 'Memory' i samband med Projekt?",
+            "a": "Det är ett beständigt minne som är isolerat till det specifika projektet."
+        },
+        {
+            "q": "Vilken funktion tillåter användare att 'remixa' en publicerad Artifact?",
+            "a": "Möjligheten att bygga vidare på någon annans delade Artifact i sitt eget konto."
+        },
+        {
+            "q": "Vad är fördelen med 'Haiku' för ett företag som hanterar stora mängder enkel data?",
+            "a": "Det är den mest kostnadseffektiva och snabbaste modellen."
+        },
+        {
+            "q": "Vilket är det första steget när man skapar ett nytt Projekt i Claude?",
+            "a": "Att ge projektet ett beskrivande namn och en kort beskrivning."
+        },
+        {
+            "q": "Vad är en 'Interactive Dashboard' ett exempel på i Claude?",
+            "a": "En Artifact skapad utifrån data (t.ex. en CSV-fil)."
+        },
+        {
+            "q": "I Research Mode, vad händer om Claude upptäcker att ett spår saknar tillräcklig information?",
+            "a": "Den genomför nya, fördjupade sökningar för att fylla luckorna."
+        },
+        {
+            "q": "Vilken förmåga hos Claude in Chrome underlättar ifyllnad av webbformulär?",
+            "a": "Förmågan att ta skärmdumpar och identifiera UI-element."
+        },
+        {
+            "q": "Var lagras lokala 'Desktop Extensions' enligt Model Context Protocol?",
+            "a": "Direkt på användarens lokala maskin via skrivbordsappen."
+        },
+        {
+            "q": "Vilken licens krävs för 'Enterprise Search' tvärs över hela organisationen?",
+            "a": "Team eller Enterprise."
+        },
+        {
+            "q": "Hur kan en säljare använda Claude för att förbereda sig inför ett möte?",
+            "a": "Genom att låta Connectors hämta mejlhistorik och sammanfatta tidigare diskussioner."
+        },
+        {
+            "q": "Vilken Claude-funktion beskrivs som en 'personlig, dynamisk verktygslåda'?",
+            "a": "Skills (Kapaciteter)."
+        },
+        {
+            "q": "Vad är 'Sonnet' bäst lämpad för enligt kursöversikten?",
+            "a": "Dagligt arbete, textgenerering och standarduppgifter."
+        },
+        {
+            "q": "Varför är det viktigt att granska källkoden i en Skill man laddat ner från extern part?",
+            "a": "Eftersom Skills kan innehålla körbar kod som kan påverka säkerheten."
+        },
+        {
+            "q": "Ge ett konkret exemepl om hur man kan använda : Project, Artifacts, Skills och Connectors",
+            "a": "Skapa ett Projekt och ladda upp företagets varumärkesriktlinjer och kampanjbeskrivningar.  Använd en Connector till Slack och be Claude: \"Hämta den senaste diskussionen om lanseringstidplanen från säljteamet\". Omvandla denna information till externt material genom att aktivera din sparade Skill \"Nyhetsbrevsskribent\". Avsluta genom att be Claude att sammanställa hela kampanjstrategin visuellt som en Artifact"
+        },
+        {
+            "q": "Vad är de huvud modeller som Calude erbjuder? ",
+            "a": "Claude, Claude Cowork, Claude Code"
+        },
+        {
+            "q": "Vad är Claude Cowork?",
+            "a": "Claude Cowork är ett agentiskt AI-verktyg som är inbyggt i Claudes skrivbordsapp  och är designat för att automatisera komplexa flerstegsuppgifter för användare som inte är programmerare"
+        },
+        {
+            "q": "Vad är det huvudsakliga användningsområdet för 'Claude for Work'?",
+            "a": "Samarbete, delad kunskap och centraliserad administration för team."
+        },
+        {
+            "q": "Vad är Claude Code?",
+            "a": "Claude Code är ett kraftfullt, terminalbaserat (CLI) agentiskt verktyg som är specifikt utformat för mjukvaruutvecklare och kodningsuppgifter"
+        },
+        {
+            "q": "Vad är det huvudsakliga användningsområdet för 'Claude Code?",
+            "a": "Dess huvudsakliga användningsområde är att fungera som en teknisk assistent – ofta beskriven som en \"Teknisk Chef\""
+        }
+    ]
+}

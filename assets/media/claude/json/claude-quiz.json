@@ -1,0 +1,849 @@
+{
+    "quiz": [
+        {
+            "id": 1,
+            "category": "Modul 1: Introduktion & Säkerhet",
+            "question": "Vem grundade Anthropic, företaget bakom AI-assistenten Claude?",
+            "options": {
+                "A": "Sam Altman",
+                "B": "Dario Amodei",
+                "C": "Elon Musk",
+                "D": "Mark Zuckerberg"
+            },
+            "correct_answer": "B",
+            "explanation": "Anthropic grundades av Dario Amodei, som tidigare var innovationschef på konkurrenten OpenAI [1, 2]."
+        },
+        {
+            "id": 2,
+            "category": "Modul 1: Introduktion & Säkerhet",
+            "question": "Vilken händelse under 2025 befäste Anthropics rykte som integritets- och säkerhetsfokuserade?",
+            "options": {
+                "A": "De lanserade en helt öppen källkodsmodell.",
+                "B": "De raderade all användardata efter 24 timmar.",
+                "C": "De vägrade ta bort Claudes säkerhetsspärrar för amerikanska militära operationer.",
+                "D": "De stängde ner sina servrar för att förhindra en cyberattack."
+            },
+            "correct_answer": "C",
+            "explanation": "Anthropic hamnade i en historisk konflikt 2025 när de vägrade ta bort säkerhetsspärrar för amerikanska militära operationer, vilket gjorde dem till det självklara valet för integritetsmedvetna användare [1, 3, 4]."
+        },
+        {
+            "id": 3,
+            "category": "Modul 1: Modeller",
+            "question": "Vilken av Claudes tre huvudmodeller är den snabbaste och mest kostnadseffektiva?",
+            "options": {
+                "A": "Claude Opus",
+                "B": "Claude Sonnet",
+                "C": "Claude Haiku",
+                "D": "Claude Pro"
+            },
+            "correct_answer": "C",
+            "explanation": "Claude Haiku är den snabbaste och mest kostnadseffektiva modellen, utmärkt för enklare uppgifter [1, 5, 6]."
+        },
+        {
+            "id": 4,
+            "category": "Modul 1: Modeller",
+            "question": "Vilken Claude-modell anses utgöra den optimala balansen mellan intelligens och hastighet för dagligt arbete?",
+            "options": {
+                "A": "Claude Haiku",
+                "B": "Claude Sonnet",
+                "C": "Claude Opus",
+                "D": "Claude Max"
+            },
+            "correct_answer": "B",
+            "explanation": "Claude Sonnet är den modell som utgör den optimala balansen mellan intelligens och hastighet, perfekt för dagligt arbete [1, 6, 7]."
+        },
+        {
+            "id": 5,
+            "category": "Modul 1: Modeller",
+            "question": "Vilken är den mest kraftfulla och intelligenta modellen i Claude-familjen, som dock drar mycket resurser?",
+            "options": {
+                "A": "Claude Haiku",
+                "B": "Claude Sonnet",
+                "C": "Claude Opus",
+                "D": "Claude Enterprise"
+            },
+            "correct_answer": "C",
+            "explanation": "Claude Opus är den mest kraftfulla och intelligenta modellen i familjen, men kräver också mest resurser [1, 6, 7]."
+        },
+        {
+            "id": 6,
+            "category": "Modul 1: Modeller",
+            "question": "Till skillnad från många av sina konkurrenter, vilken inbyggd funktion saknar Claude medvetet?",
+            "options": {
+                "A": "Förmågan att analysera PDF-filer.",
+                "B": "Förmågan att läsa kod.",
+                "C": "Förmågan att generera bilder.",
+                "D": "Förmågan att översätta språk."
+            },
+            "correct_answer": "C",
+            "explanation": "Claude saknar medvetet inbyggd bildgenerering och fokuserar i stället helt på text, logik och ekosystemsintegrationer [5, 8]."
+        },
+        {
+            "id": 7,
+            "category": "Modul 2: Projects",
+            "question": "Vad är det primära syftet med funktionen 'Projects' i Claude?",
+            "options": {
+                "A": "Att automatisera e-postutskick.",
+                "B": "Att fungera som isolerade arbetsytor med ett beständigt minne och en fast kunskapsbas.",
+                "C": "Att enbart generera kod för webbutvecklare.",
+                "D": "Att publicera artiklar direkt på internet."
+            },
+            "correct_answer": "B",
+            "explanation": "Ett projekt är en dedikerad och isolerad arbetsyta med eget beständigt minne och en fast kontext baserad på uppladdade filer [9-11]."
+        },
+        {
+            "id": 8,
+            "category": "Modul 2: Projects",
+            "question": "Hur hanterar Claude historik och kontext inuti ett Project jämfört med den vanliga chatten?",
+            "options": {
+                "A": "Den raderar historiken efter varje konversation.",
+                "B": "Den delar automatiskt kontexten med alla dina vänner.",
+                "C": "Den har ett beständigt minne där den kommer ihåg projektets syfte över konversationerna.",
+                "D": "Den begränsar dig till maximalt 10 meddelanden."
+            },
+            "correct_answer": "C",
+            "explanation": "Ett projekt ger Claude ett långsiktigt minne för det specifika arbetet, så att du slipper upprepa grundinstruktioner [12, 13]."
+        },
+        {
+            "id": 9,
+            "category": "Modul 2: Projects",
+            "question": "Vad händer när ett projekts kunskapsbas börjar närma sig gränsen för sitt kontextfönster?",
+            "options": {
+                "A": "Projektet raderas automatiskt.",
+                "B": "Claude aktiverar Retrieval Augmented Generation (RAG) för att skala upp kapaciteten.",
+                "C": "Användaren tvingas radera filer manuellt.",
+                "D": "Claude byter automatiskt till den mindre modellen Haiku."
+            },
+            "correct_answer": "B",
+            "explanation": "När kunskapen närmar sig gränsen aktiverar Claude sömlöst RAG-läget (Retrieval Augmented Generation) för att söka och hämta specifik information [9, 14, 15]."
+        },
+        {
+            "id": 10,
+            "category": "Modul 2: Projects",
+            "question": "Hur mycket kan RAG-läget (Retrieval Augmented Generation) utöka projektets kapacitet?",
+            "options": {
+                "A": "Upp till 2 gånger.",
+                "B": "Upp till 5 gånger.",
+                "C": "Upp till 10 gånger.",
+                "D": "Det finns ingen gräns."
+            },
+            "correct_answer": "C",
+            "explanation": "RAG-läget expanderar projektets kapacitet med upp till 10x bibehållen svarskvalitet [9, 14]."
+        },
+        {
+            "id": 11,
+            "category": "Modul 2: Projects",
+            "question": "Vilka typer av dokument kan du ladda upp till kunskapsbasen i ett Projekt?",
+            "options": {
+                "A": "Endast textfiler (.txt).",
+                "B": "Endast bildfiler.",
+                "C": "Flera format inklusive PDF, DOCX, CSV, TXT och HTML.",
+                "D": "Du kan inte ladda upp filer, endast klistra in text."
+            },
+            "correct_answer": "C",
+            "explanation": "Claude stöder uppladdning av många olika filtyper såsom PDF, DOCX, CSV, TXT och HTML till projektets kunskapsbas [15, 16]."
+        },
+        {
+            "id": 12,
+            "category": "Modul 2: Projects",
+            "question": "Varför är det viktigt att ge filerna beskrivande namn (t.ex. 'Grafisk-Profil-2024.pdf') när de laddas upp i ett Projekt?",
+            "options": {
+                "A": "För att filerna annars raderas automatiskt.",
+                "B": "För att Claude använder filnamnen för att förstå innehållet och hämta rätt information.",
+                "C": "Det påverkar hur mycket molnlagring som används.",
+                "D": "Det krävs för att kunna dela filen publikt."
+            },
+            "correct_answer": "B",
+            "explanation": "Claude använder filnamnen för att förstå vad filen innehåller och snabbt kunna hämta rätt information vid frågor [15, 17]."
+        },
+        {
+            "id": 13,
+            "category": "Modul 2: Projects",
+            "question": "För användare med Claude for Work (Team/Enterprise), vilka behörighetsnivåer finns vid delning av Projekt?",
+            "options": {
+                "A": "Endast Läs och Skriv.",
+                "B": "Can view, Can edit, Owner.",
+                "C": "Admin och Guest.",
+                "D": "Projekt kan inte delas med andra."
+            },
+            "correct_answer": "B",
+            "explanation": "Vid delning av projekt kan man välja mellan tre behörighetsnivåer: Can view (visa), Can edit (redigera) och Owner (ägare) [18-20]."
+        },
+        {
+            "id": 14,
+            "category": "Modul 2: Artifacts",
+            "question": "Vad är en Artifact (Artefakt) i Claudes webbgränssnitt?",
+            "options": {
+                "A": "En typ av molnlagring för bilder.",
+                "B": "Fristående, interaktiva utdata som ritas upp i ett separat sidofönster bredvid konversationen.",
+                "C": "Ett verktyg för att städa användarens skrivbord.",
+                "D": "En äldre version av AI-modellen."
+            },
+            "correct_answer": "B",
+            "explanation": "Artifacts är fristående, interaktiva resultat (som dokument, webbsidor eller kod) som Claude skapar i ett dedikerat fönster bredvid din konversation [21, 22]."
+        },
+        {
+            "id": 15,
+            "category": "Modul 2: Artifacts",
+            "question": "När genererar Claude automatiskt innehållet som en Artifact?",
+            "options": {
+                "A": "Vid varje sökning oavsett längd.",
+                "B": "När innehållet är komplext, ofta över 15 rader, och kan stå för sig självt.",
+                "C": "Endast när användaren betalar för Enterprise.",
+                "D": "Bara om innehållet är på engelska."
+            },
+            "correct_answer": "B",
+            "explanation": "Claude skapar en artefakt när innehållet uppfyller vissa kriterier: det är betydande (ofta över 15 rader), fristående och något du sannolikt vill redigera eller återanvända [23]."
+        },
+        {
+            "id": 16,
+            "category": "Modul 2: Artifacts",
+            "question": "Vad innebär det att publicera en Artifact publikt?",
+            "options": {
+                "A": "Hela din privata chattlogg blir sökbar på Google.",
+                "B": "Artefakten raderas från ditt konto och läggs på en gemensam server.",
+                "C": "Du skapar en webblänk där vem som helst kan se och interagera med resultatet utan ett Claude-konto.",
+                "D": "Artefakten säljs på en marknadsplats för kod."
+            },
+            "correct_answer": "C",
+            "explanation": "Genom att publicera skapas en offentlig webblänk så att vem som helst kan klicka runt och läsa presentationen utan att ha ett Claude-konto, och den privata loggen förblir dold [24-26]."
+        },
+        {
+            "id": 17,
+            "category": "Modul 2: Artifacts",
+            "question": "Vad händer när någon 'remixar' din publika Artifact?",
+            "options": {
+                "A": "De ändrar i din originalfil på ditt konto.",
+                "B": "De laddar ner den som en PDF.",
+                "C": "De öppnar den i sitt eget Claude-konto för att modifiera och bygga vidare på din idé privat.",
+                "D": "De raderar artefakten från webben."
+            },
+            "correct_answer": "C",
+            "explanation": "Att remixa en artefakt innebär att en annan användare öppnar den i sitt eget Claude-konto för att bygga vidare på idén utan att påverka ditt original [25, 26]."
+        },
+        {
+            "id": 18,
+            "category": "Modul 2: Artifacts",
+            "question": "Om du ber Claude skapa ett visuellt flödesschema eller organisationsschema som en Artifact, vilket format används ofta?",
+            "options": {
+                "A": "Mermaid-diagram",
+                "B": "MP4-video",
+                "C": "Excel-kalkylblad",
+                "D": "Word-dokument"
+            },
+            "correct_answer": "A",
+            "explanation": "För visuella diagram som flödesscheman, sekvensdiagram och organisationsscheman använder Claude formatet Mermaid-diagram som Artifact [23, 27]."
+        },
+        {
+            "id": 19,
+            "category": "Modul 2: Artifacts",
+            "question": "Vilken typ av Artifact används för att skapa fullt interaktiva gränssnitt, som fungerande kalkylatorer eller små klickbara spel?",
+            "options": {
+                "A": "SVG-bilder",
+                "B": "React-komponenter",
+                "C": "Textdokument",
+                "D": "CSV-filer"
+            },
+            "correct_answer": "B",
+            "explanation": "React-komponenter används för att rita upp interaktiva användargränssnitt, dashboards och spel som har inbyggd logik och reagerar på klick [23, 27]."
+        },
+        {
+            "id": 20,
+            "category": "Modul 2: Artifacts",
+            "question": "Vilket texttungt format är vanligt bland Artifacts när Claude genererar rapporter eller mötesanteckningar?",
+            "options": {
+                "A": "Python",
+                "B": "Markdown eller klartext",
+                "C": "SVG",
+                "D": "JavaScript"
+            },
+            "correct_answer": "B",
+            "explanation": "Dokument i texttunga format som Markdown eller klartext används ofta som Artifacts för rapporter, projektplaner och mötesanteckningar [23, 28]."
+        },
+        {
+            "id": 21,
+            "category": "Modul 3: Skills",
+            "question": "Vad är det primära syftet med en 'Skill' (Kapacitet) i Claude?",
+            "options": {
+                "A": "Att lagra stora mängder referensdokument för ett enskilt projekt.",
+                "B": "Att definiera ett arbetsflöde och instruktioner för att automatisera återkommande uppgifter konsekvent.",
+                "C": "Att fungera som en sökfunktion över hela internet.",
+                "D": "Att dela filer direkt till externa klienter via e-post."
+            },
+            "correct_answer": "B",
+            "explanation": "Skills är en personlig verktygslåda av instruktioner och resurser som definierar metodiken för hur repetitiva arbetsflöden ska utföras konsekvent [29-31]."
+        },
+        {
+            "id": 1,
+            "category": "Modul 3: Skills",
+            "question": "Hur många typer av Skills (Kapaciteter) finns det i Claude?",
+            "options": {
+                "A": "En - endast inbyggda.",
+                "B": "Två - Anthropic Skills (inbyggda) och Custom Skills (anpassade).",
+                "C": "Tre - Inbyggda, Anpassade och Delade.",
+                "D": "Fyra - Text, Bild, Kod och Analys."
+            },
+            "correct_answer": "B",
+            "explanation": "Det finns två huvudkategorier av Skills: Anthropic Skills som är inbyggda och skapade av Anthropic, samt Custom Skills som du eller din organisation skapar själva för skräddarsydda arbetsflöden [1]."
+        },
+        {
+            "id": 22,
+            "category": "Modul 3: Skills",
+            "question": "Hur aktiveras en inbyggd Anthropic Skill (t.ex. för att skapa en Excel- eller PDF-fil)?",
+            "options": {
+                "A": "Man måste skriva specialkommandot '/skill'.",
+                "B": "De aktiveras helt automatiskt i bakgrunden när uppgiften kräver det.",
+                "C": "De kräver att man först skapar en Custom GPT.",
+                "D": "De kan endast aktiveras i Research Mode."
+            },
+            "correct_answer": "B",
+            "explanation": "Anthropics inbyggda Skills aktiveras helt automatiskt i bakgrunden när Claude känner av att de behövs, utan några specialkommandon [32, 33]."
+        },
+        {
+            "id": 23,
+            "category": "Modul 3: Skills",
+            "question": "Vad måste en betalande användare aktivera i sina inställningar för att överhuvudtaget kunna använda Skills?",
+            "options": {
+                "A": "Enterprise Search",
+                "B": "Public Artifacts",
+                "C": "Code execution and file creation",
+                "D": "Web Browsing"
+            },
+            "correct_answer": "C",
+            "explanation": "Eftersom Skills kan hantera filer och köra kod måste användaren aktivera funktionen 'Code execution and file creation' för att utföra dem i en säker sandlåda [34, 35]."
+        },
+        {
+            "id": 24,
+            "category": "Modul 3: Skills",
+            "question": "Vilket är det enklaste sättet att skapa en anpassad (Custom) Skill i Claude?",
+            "options": {
+                "A": "Genom att skriva programmeringskoden manuellt i Python.",
+                "B": "Genom konversation; du beskriver uppgiften och Claude skapar verktyget och strukturen automatiskt.",
+                "C": "Genom att ladda ner en tredjeparts-app från App Store.",
+                "D": "Skills kan endast skapas av organisationens administratör."
+            },
+            "correct_answer": "B",
+            "explanation": "Det enklaste sättet att skapa en Custom Skill är genom en vanlig konversation med Claude, där assistenten bygger verktygets struktur genom att ställa frågor till dig [36-38]."
+        },
+        {
+            "id": 25,
+            "category": "Modul 3: Skills",
+            "question": "Vilken analogi förklarar bäst skillnaden mellan ett Projekt och en Skill i kursmaterialet?",
+            "options": {
+                "A": "Projekt lagrar kunskap (information), medan Skills utför processer/tasker (metodik).",
+                "B": "Projekt används bara för bilder, Skills för text.",
+                "C": "Projekt är tillgängliga överallt, medan Skills är låsta till ett enda chattfönster.",
+                "D": "Det finns ingen skillnad, båda är samma sak."
+            },
+            "correct_answer": "A",
+            "explanation": "Projekt fungerar som dedikerade kunskapshubbar (vad Claude ska veta), medan Skills fungerar som processmotorer som definierar metodiken (hur uppgiften ska utföras) [35, 39, 40]."
+        },
+        {
+            "id": 26,
+            "category": "Modul 3: Skills",
+            "question": "Vilket filformat genereras och används när du laddar ner eller laddar upp en Custom Skill till inställningarna?",
+            "options": {
+                "A": ".EXE-fil",
+                "B": "ZIP-fil (.zip)",
+                "C": "Enbart en bildfil (.png)",
+                "D": "Ett Word-dokument (.docx)"
+            },
+            "correct_answer": "B",
+            "explanation": "När Claude är färdig med att bygga en Skill via chatt genereras en nedladdningsbar ZIP-fil som innehåller den korrekt strukturerade skillen för uppladdning [39, 41]."
+        },
+        {
+            "id": 27,
+            "category": "Modul 3: Skills",
+            "question": "Hur skiljer sig Claudes Skills från att använda en Custom GPT i ChatGPT?",
+            "options": {
+                "A": "Skills kan endast användas en gång.",
+                "B": "Skills kräver manuell kodning, GPTs gör det inte.",
+                "C": "Du behöver inte välja en Skill i förväg; Claude känner dynamiskt av vilken Skill som behövs i en pågående chatt.",
+                "D": "Skills fungerar endast med Excel-filer."
+            },
+            "correct_answer": "C",
+            "explanation": "Till skillnad från Custom GPTs där du måste välja en bot innan du börjar, bär du med dig dina Skills och Claude aktiverar dem dynamiskt vid behov under konversationen [30, 35]."
+        },
+        {
+            "id": 28,
+            "category": "Modul 4: Integrering",
+            "question": "Vad står förkortningen MCP för när man pratar om Claudes Connectors?",
+            "options": {
+                "A": "Multi-Channel Process",
+                "B": "Model Context Protocol",
+                "C": "Machine Computing Program",
+                "D": "Main Cloud Provider"
+            },
+            "correct_answer": "B",
+            "explanation": "MCP står för Model Context Protocol, vilket är tekniken och den universella standarden som säkert kopplar ihop Claude med externa applikationer [42, 43]."
+        },
+        {
+            "id": 1,
+            "category": "Modul 4: Integrering",
+            "question": "Vad är det primära syftet med en Connector (integrering) i Claude?",
+            "options": {
+                "A": "Att automatiskt översätta konversationer till andra språk.",
+                "B": "Att fungera som en digital brygga som säkert kopplar ihop Claude med externa molntjänster och program, som Google Drive eller Slack.",
+                "C": "Att agera som ett lokalt antivirusprogram som granskar dina uppladdade filer.",
+                "D": "Att skapa ett permanent, isolerat och låst lagringsutrymme för dina projekt."
+            },
+            "correct_answer": "B",
+            "explanation": "Connectors är digitala bryggor (drivna av Model Context Protocol, MCP) som kopplar Claude till molntjänster och onlineapplikationer. Detta förvandlar Claude från en passiv assistent till en informerad samarbetspartner som kan arbeta direkt med din faktiska data i externa system [1, 2]."
+        },
+        {
+            "id": 1,
+            "category": "Modul 4: Integrering",
+            "question": "Hur många huvudtyper av Connectors (integreringar) finns det för att utöka Claudes räckvidd?",
+            "options": {
+                "A": "En - endast webbaserade molntjänster.",
+                "B": "Två - Web Connectors (molntjänster) och Desktop extensions (lokala skrivbordstillägg).",
+                "C": "Tre - Webb-, Mobil- och Databasintegreringar.",
+                "D": "Fyra - API, Webhooks, FTP och Lokala filer."
+            },
+            "correct_answer": "B",
+            "explanation": "Det finns två huvudtyper av Connectors: Web Connectors som länkar Claude till molntjänster (som Google Drive, Notion och Slack), och Desktop extensions som körs lokalt på datorn via Claude Desktop-appen för att interagera med lokala program och filer [1]."
+        },
+        {
+            "id": 1,
+            "category": "Modul 4: Integrering",
+            "question": "Använder Claudes Connectors (integreringar) tekniken MCP (Model Context Protocol)?",
+            "options": {
+                "A": "Nej, Connectors är enbart baserade på direkt filuppladdning.",
+                "B": "Ja, MCP är den universella standarden och tekniken som driver Connectors för att koppla ihop Claude med externa applikationer.",
+                "C": "Endast när Claude används inuti ett lokalt nätverk utan internetanslutning.",
+                "D": "Nej, MCP är ett separat protokoll som enbart används för att generera och exekvera kod."
+            },
+            "correct_answer": "B",
+            "explanation": "Ja, Connectors drivs av Model Context Protocol (MCP) [1]. Man kan tänka på MCP som en 'USB-C-kabel för AI' – en universell standard som låter Claude ansluta till många olika applikationer genom ett enda konsekvent gränssnitt [1]."
+        },
+        {
+            "id": 29,
+            "category": "Modul 4: Integrering",
+            "question": "Vilka av följande är exempel på molntjänster (Web Connectors) som Claude ofta kopplas till?",
+            "options": {
+                "A": "Google Drive, Slack och Notion.",
+                "B": "Endast lokala hårddiskar.",
+                "C": "Photoshop och Premiere Pro.",
+                "D": "Windows Kontrollpanel."
+            },
+            "correct_answer": "A",
+            "explanation": "Populära Web Connectors inkluderar Google Drive, Slack, Notion, Gmail och Asana som länkar Claude till molnbaserade tjänster [42, 44, 45]."
+        },
+        {
+            "id": 1,
+            "category": "Modul 4: Integrering",
+            "question": "Du vill använda en Connector för att koppla Claude till Google Mail. Efter att ha valt Gmail i listan, vad måste du göra för att färdigställa och konfigurera anslutningen?",
+            "options": {
+                "A": "Ladda ner och installera en lokal e-postklient på din dator.",
+                "B": "Du omdirigeras till inloggningssidan för att autentisera dig och konfigurera (godkänna) vilka behörigheter Claude ska få till din e-post.",
+                "C": "Claude får omedelbart tillgång till alla dina mejl, ingen konfiguration krävs.",
+                "D": "Du måste manuellt skriva in ett API-skript i chatten för att etablera anslutningen."
+            },
+            "correct_answer": "B",
+            "explanation": "När du sätter upp en Web Connector omdirigeras du till tjänstens inloggningssida. Där måste du autentisera dig med dina vanliga inloggningsuppgifter och konfigurera anslutningen genom att granska och godkänna de specifika behörigheter Claude behöver för att fungera säkert [1]."
+        },
+        {
+            "id": 30,
+            "category": "Modul 4: Integrering",
+            "question": "Hur hanterar Connectors användarens säkerhet och behörighet mot externa tjänster (ex. e-post)?",
+            "options": {
+                "A": "Claude ser automatiskt alla företagets filer.",
+                "B": "Claude kan enbart få tillgång till den data du själv har behörighet till, och du kan styra behörigheterna.",
+                "C": "Anslutningen kan aldrig återkallas när den väl är gjord.",
+                "D": "Claude sparar alla dina externa lösenord lokalt."
+            },
+            "correct_answer": "B",
+            "explanation": "Claude ser bara det du ser och har endast tillgång till den data du uttryckligen gett behörighet till i den specifika applikationen [46]."
+        },
+        {
+            "id": 33,
+            "category": "Modul 4: Integrering",
+            "question": "Vilken specifik uppgift i Excel är 'Claude in Excel'-gränssnittet väl anpassat för?",
+            "options": {
+                "A": "Att designa logotyper inuti cellerna.",
+                "B": "Att spela upp instruktionsvideor för Excel.",
+                "C": "Att bygga finansiella modeller, avkoda komplexa kalkylblad och spåra formel-fel (t.ex. #REF!).",
+                "D": "Att skriva och skicka mejl från kalkylbladet."
+            },
+            "correct_answer": "C",
+            "explanation": "Claude i Excel arbetar via en sidopanel för att analysera kalkylblad, bygga finansiella modeller och spåra formelfel som #REF! [52, 53]."
+        },
+        {
+            "id": 34,
+            "category": "Modul 4: Integrering",
+            "question": "Vilket av följande är ett huvudområde för 'Claude i Chrome'-tillägget?",
+            "options": {
+                "A": "Att fungera som ett antivirusprogram för din webbläsare.",
+                "B": "Att blockera alla webbannonser.",
+                "C": "Att sammanfatta långa artiklar medan du surfar och automatisera webbuppgifter.",
+                "D": "Att bygga 3D-modeller direkt i Chrome."
+            },
+            "correct_answer": "C",
+            "explanation": "Claude i Chrome låter dig sammanfatta artiklar medan du surfar, automatisera ifyllnad av webbformulär och hantera e-post direkt i webbläsaren [53, 54]."
+        },
+        {
+            "id": 35,
+            "category": "Modul 4: Integrering",
+            "question": "Vad rekommenderar Anthropic gällande användningen av Chrome-tillägget (som är i research preview)?",
+            "options": {
+                "A": "Att enbart använda det för att ladda ner filmer.",
+                "B": "Att använda det på vilka webbplatser som helst utan att tänka på säkerhet.",
+                "C": "Att främst använda det för lågriskuppgifter på betrodda webbplatser, eftersom det kan stöta på 'prompt injections'.",
+                "D": "Att det helt ersätter traditionella sökmotorer."
+            },
+            "correct_answer": "C",
+            "explanation": "Då tillägget är i research preview rekommenderar Anthropic att det används för lågriskuppgifter på betrodda webbplatser, och det blockerar som standard vissa högriskkategorier [55]."
+        },
+        {
+            "id": 36,
+            "category": "Modul 4: Integrering",
+            "question": "Hur kan man bäst integrera 'Claude i Slack' i sitt dagliga arbetsflöde enligt kursmaterialet?",
+            "options": {
+                "A": "För att sammanfatta långa diskussionstrådar och förbereda sig inför möten med kontext direkt från kanaler.",
+                "B": "För att spela in röstsamtal.",
+                "C": "För att skapa Excel-kalkylblad inuti chattfönstret.",
+                "D": "För att genomföra Research Mode analyser."
+            },
+            "correct_answer": "A",
+            "explanation": "Claude i Slack är perfekt för att sammanfatta långa diskussionstrådar och snabbt svara på frågor direkt i din kommunikationsplattform [56, 57]."
+        },
+        {
+            "id": 37,
+            "category": "Modul 5: Research Mode",
+            "question": "Hur skiljer sig Research Mode från en vanlig webbsökning i Claude?",
+            "options": {
+                "A": "Research Mode ger ett kortare och mer koncist svar på en sekund.",
+                "B": "Research Mode söker endast internt på dina lokala filer.",
+                "C": "Research Mode gör flerstegssökningar där den bygger vidare på tidigare fynd för att skapa en djupgående utredning.",
+                "D": "Research Mode används uteslutande för att skriva kod."
+            },
+            "correct_answer": "C",
+            "explanation": "Till skillnad från enkla webbsökningar fungerar Research Mode som en systematisk utredare som planerar, gör flera sökningar och bygger vidare på sina egna fynd [58-60]."
+        },
+        {
+            "id": 38,
+            "category": "Modul 5: Research Mode",
+            "question": "Hur lång tid uppskattas en Research Mode-analys vanligtvis ta för att slutföras?",
+            "options": {
+                "A": "Mindre än 5 sekunder.",
+                "B": "Mellan 1 och 2 minuter.",
+                "C": "Mellan 5 och 45 minuter.",
+                "D": "Minst 24 timmar."
+            },
+            "correct_answer": "C",
+            "explanation": "Eftersom det är ett krävande flerstegsarbete tar en rapport i Research Mode vanligen mellan 5 och 45 minuter att slutföras [58, 60, 61]."
+        },
+        {
+            "id": 39,
+            "category": "Modul 5: Research Mode",
+            "question": "Vad är en viktig egenskap hos de färdiga rapporterna som produceras i Research Mode?",
+            "options": {
+                "A": "De genereras enbart som PDF-filer.",
+                "B": "Varje påstående och fakta är tydligt källhänvisad (citerad) för enkel verifiering.",
+                "C": "De saknar helt källhänvisningar.",
+                "D": "De översätts automatiskt till fem olika språk."
+            },
+            "correct_answer": "B",
+            "explanation": "Varje påstående i en Research-rapport är länkad till sin källa (källhänvisad), vilket gör det enkelt för användaren att verifiera informationen [58, 60, 62]."
+        },
+        {
+            "id": 40,
+            "category": "Modul 5: Research Mode",
+            "question": "Vilken intern inställning måste vara aktiverad för att Research Mode överhuvudtaget ska fungera?",
+            "options": {
+                "A": "Incognito-chatt",
+                "B": "Webb-sökning (Web search)",
+                "C": "Mermaid diagram",
+                "D": "Code execution"
+            },
+            "correct_answer": "B",
+            "explanation": "För att Claude ska kunna genomföra sina undersökningar på nätet måste Web search vara aktiverat i inställningarna för sökning och verktyg [61]."
+        },
+        {
+            "id": 41,
+            "category": "Modul 5: Research Mode",
+            "question": "När man aktiverar Research Mode, vilken annan kraftfull funktion aktiveras automatiskt i bakgrunden för att hjälpa Claude planera sökningarna?",
+            "options": {
+                "A": "Enterprise Search",
+                "B": "Extended Thinking",
+                "C": "Custom Skills",
+                "D": "Cowork-agenten"
+            },
+            "correct_answer": "B",
+            "explanation": "När Research Mode aktiveras slås 'Extended thinking' automatiskt på, vilket låter Claude bryta ner uppgiften och planera hur den ska undersökas i flera steg [58, 59]."
+        },
+        {
+            "id": 42,
+            "category": "Modul 5: Research Mode",
+            "question": "Om du har ett komplext matematiskt problem eller vill ha djup logisk analys av en text du laddat upp (utan att söka på nätet), vad bör du använda?",
+            "options": {
+                "A": "Web search",
+                "B": "Research Mode",
+                "C": "Enbart 'Extended thinking'",
+                "D": "Claude i Chrome"
+            },
+            "correct_answer": "C",
+            "explanation": "Extended thinking utan Research Mode rekommenderas för djupa resonemang, matematik och analys som inte kräver insamling av ny extern information [63]."
+        },
+        {
+            "id": 43,
+            "category": "Modul 5: Research Mode",
+            "question": "Vilket är ett utmärkt tips för att skriva effektiva prompter i Research Mode enligt kursmaterialet?",
+            "options": {
+                "A": "Använd max 5 ord.",
+                "B": "Be Claude om en länk till Wikipedia och inget mer.",
+                "C": "Specificera exakt vilka sektioner och vilken struktur du vill att rapporten ska ha, samt relevanta budgetar/begränsningar.",
+                "D": "Använd alltid versaler."
+            },
+            "correct_answer": "C",
+            "explanation": "För effektiva Research-prompter bör man vara specifik med mål, önskad struktur (t.ex. sektioner) och eventuella begränsningar [64]."
+        },
+        {
+            "id": 44,
+            "category": "Prenumerationer och Arkitektur",
+            "question": "Vilken nivå i det 'Agentiska skiftet' representerar den vanliga webbchatten Claude.ai?",
+            "options": {
+                "A": "Kodningslagret (Teknisk Chef)",
+                "B": "Konversationslagret (Forskare/Rådgivare)",
+                "C": "Arbetsflödeslagret (Operativ Chef)",
+                "D": "Företagssökningslagret"
+            },
+            "correct_answer": "B",
+            "explanation": "Den vanliga webbchatten (Claude AI) representerar konversationslagret, ofta beskriven som forskare eller rådgivare för resonemang och texter [1]."
+        },
+        {
+            "id": 45,
+            "category": "Prenumerationer och Arkitektur",
+            "question": "Hur stor är Claudes kontextfönster ('working memory') för en enskild session?",
+            "options": {
+                "A": "30K tokens",
+                "B": "100K tokens",
+                "C": "200K tokens",
+                "D": "500K tokens"
+            },
+            "correct_answer": "C",
+            "explanation": "Kontextfönstret för Claude är 200K tokens, vilket är stort nog att processa många och långa dokument i en och samma sittning [65, 66]."
+        },
+        {
+            "id": 46,
+            "category": "Prenumerationer och Arkitektur",
+            "question": "Vad kostar en Claude Pro-prenumeration vid månadsvis betalning (utan rabatt)?",
+            "options": {
+                "A": "$10 per månad",
+                "B": "$20 per månad",
+                "C": "$50 per månad",
+                "D": "$100 per månad"
+            },
+            "correct_answer": "B",
+            "explanation": "Claude Pro kostar $20 per månad och riktar sig till daglig produktivitet [67]."
+        },
+        {
+            "id": 47,
+            "category": "Prenumerationer och Arkitektur",
+            "question": "För vilken typ av användare är 'Claude Max'-prenumerationen primärt utformad, med tanke på prislappen på $100-$200 i månaden?",
+            "options": {
+                "A": "Studenter",
+                "B": "Avslappnade användare som ställer enkla sökfrågor.",
+                "C": "Power-users och specialister som behöver 5x eller 20x högre kapacitet för tunga flerstegsuppgifter.",
+                "D": "Endast för utvecklare som kodar."
+            },
+            "correct_answer": "C",
+            "explanation": "Max-planen, från $100 per månad, erbjuder betydligt mer användningsutrymme (5x-20x) för tunga och krävande uppgifter och power-users [67]."
+        },
+        {
+            "id": 48,
+            "category": "Prenumerationer och Arkitektur",
+            "question": "Vilka funktioner inkluderar Enterprise-planen som inte ingår i Team-planen?",
+            "options": {
+                "A": "Tillgång till Claude Opus.",
+                "B": "Möjlighet att skapa Skills.",
+                "C": "SCIM, Audit logs och HIPAA-ready erbjudande.",
+                "D": "Delning av Projekt."
+            },
+            "correct_answer": "C",
+            "explanation": "Enterprise-planen utökar säkerheten med funktioner som SCIM (System for Cross-domain Identity Management), audit logs, och ett HIPAA-ready erbjudande [68]."
+        },
+        {
+            "id": 49,
+            "category": "Prenumerationer och Arkitektur",
+            "question": "Tränar Anthropic som standard sina AI-modeller på den data du laddar upp inom en Team- eller Enterprise-licens?",
+            "options": {
+                "A": "Ja, alltid.",
+                "B": "Nej, de tränar ingen data som standard.",
+                "C": "Endast om man laddar upp bilder.",
+                "D": "Endast när man använder Research Mode."
+            },
+            "correct_answer": "B",
+            "explanation": "För Team- och Enterprise-planerna sker det som standard ingen modellträning på organisationens innehåll [69, 70]."
+        },
+        {
+            "id": 50,
+            "category": "Blandade Funktioner",
+            "question": "Kan Claude arbeta med dokument direkt från Google Drive inuti ett Project?",
+            "options": {
+                "A": "Ja, genom att ansluta och hämta dokumenten direkt via filmenyn.",
+                "B": "Nej, filer måste alltid laddas ner lokalt och laddas upp manuellt som PDF.",
+                "C": "Ja, men bara om dokumentet innehåller diagram.",
+                "D": "Nej, Google Drive blockeras av säkerhetsskäl."
+            },
+            "correct_answer": "A",
+            "explanation": "När du bygger din kunskapsbas kan du koppla till Google Drive för att länka och hämta in dokument direkt [16]."
+        },
+        {
+            "id": 51,
+            "category": "Blandade Funktioner",
+            "question": "Vad är en rekommenderad strategi för att undvika att snabbt slå i taket för hur många frågor du får ställa (Token-budget)?",
+            "options": {
+                "A": "Ställ bara frågor med enstaka ord.",
+                "B": "Ladda upp samma dokument flera gånger.",
+                "C": "Batcha (gruppera) dina uppgifter i en och samma instruktion för att spara på kvoten.",
+                "D": "Skapa ett nytt konto varje dag."
+            },
+            "correct_answer": "C",
+            "explanation": "Att låta Claude arbeta med omfattande uppgifter drar mycket datakraft; ett tips är att batcha dina uppgifter i en och samma prompt för att optimera användningen [71, 72]."
+        },
+        {
+            "id": 52,
+            "category": "Blandade Funktioner",
+            "question": "Vad innebär det att en Artifact 'renderas' av Claude?",
+            "options": {
+                "A": "Att koden sparas som en ljudfil.",
+                "B": "Att AI:n ritar upp koden som en färdig, klickbar applikation eller layout direkt i fönstret.",
+                "C": "Att den skickas för godkännande till Anthropic.",
+                "D": "Att den blockeras av säkerhetsskäl."
+            },
+            "correct_answer": "B",
+            "explanation": "Att rendera innebär att Claude inte bara visar råkod, utan ritar upp och presenterar resultatet visuellt så att man kan interagera med det [22]."
+        },
+        {
+            "id": 53,
+            "category": "Blandade Funktioner",
+            "question": "För att ställa in instruktioner (Process, Tone, Specific requirements) som ska gälla för *allt* arbete i ett Projekt, var sparar du detta?",
+            "options": {
+                "A": "I Custom GPT-menyn.",
+                "B": "Du måste skriva det i varje nytt chattmeddelande.",
+                "C": "I projektets 'Instructions'-panel.",
+                "D": "Som en kommentar i ett av dokumenten."
+            },
+            "correct_answer": "C",
+            "explanation": "Du kan skriva och spara projektinstruktioner i instruktionspanelen. Dessa instruktioner appliceras sedan på varje konversation inom projektet [9, 73]."
+        },
+        {
+            "id": 54,
+            "category": "Blandade Funktioner",
+            "question": "Vilket av följande är ett idealiskt exempel på när du bör skapa ett Projekt istället för en tillfällig chatt?",
+            "options": {
+                "A": "Att fråga om en specifik Excel-formel.",
+                "B": "Att snabbt översätta ett stycke från svenska till engelska.",
+                "C": "För lanseringen av Q4-marknadskampanjen, där du behöver samla produktspecifikationer, analyser och konsekvent tonalitet på en plats.",
+                "D": "Att be om ett recept på pannkakor."
+            },
+            "correct_answer": "C",
+            "explanation": "Ett projekt är perfekt för pågående arbeten och kundsamarbeten (t.ex. en Q4-kampanj eller onboarding) där en beständig kunskapsbas och konsekvens krävs över tid [57, 74]."
+        },
+        {
+            "id": 55,
+            "category": "Blandade Funktioner",
+            "question": "En SVG-bild genererad som en Artifact är bäst lämpad för?",
+            "options": {
+                "A": "Fotografier och tunga bilder.",
+                "B": "Skalbar vektorgrafik, såsom logotyper och ikoner.",
+                "C": "Ljudfiler och poddar.",
+                "D": "Flerstegssökningar på webben."
+            },
+            "correct_answer": "B",
+            "explanation": "SVG-filer är skalbar vektorgrafik, perfekta för logotyper, ikoner och liknande grafiska element som ritas upp i artefaktfönstret [23, 27]."
+        },
+        {
+            "id": 56,
+            "category": "Blandade Funktioner",
+            "question": "Vad är skillnaden på minnet i ett Projekt jämfört med konversationsminnet i den vanliga chatten?",
+            "options": {
+                "A": "Projektets minne raderas så fort du loggar ut.",
+                "B": "Projektets minne sträcker sig över flera separata konversationer inom projektet, vilket eliminerar behovet av att upprepa grundfakta.",
+                "C": "Chatten har obegränsat minne, medan projekt är låsta till 5 filer.",
+                "D": "Det är ingen skillnad."
+            },
+            "correct_answer": "B",
+            "explanation": "Projekt ger Claude ett beständigt, långsiktigt minne och kontext för det specifika arbetet som spänner över hela arbetsytans alla chattar [12, 13]."
+        },
+        {
+            "id": 57,
+            "category": "Blandade Funktioner",
+            "question": "Varför blockerar Claude i Chrome vissa typer av webbplatser, såsom finansiella tjänster?",
+            "options": {
+                "A": "För att modellen inte förstår siffror.",
+                "B": "Av säkerhetsskäl minimerar den risken på högrisk-webbplatser eftersom tillägget är i research preview.",
+                "C": "För att den har nått taket för token-användning.",
+                "D": "För att användare endast ska kunna söka efter bilder."
+            },
+            "correct_answer": "B",
+            "explanation": "Eftersom webbautomatisering sker i research preview och kan hantera högriskuppgifter är den designad med begränsningar för sidor med hög risk, t.ex. finansiella tjänster [55]."
+        },
+        {
+            "id": 58,
+            "category": "Blandade Funktioner",
+            "question": "Om du har publicerat en interaktiv Artifact offentligt, kan läsarna av länken se vad ni chattade om i bakgrunden?",
+            "options": {
+                "A": "Ja, chattloggen visas alltid bredvid.",
+                "B": "Nej, endast den valda versionen av artefakten blir publik, och din privata chattlogg förblir dold.",
+                "C": "Ja, om de har en Enterprise-licens.",
+                "D": "Endast om artefakten handlar om marknadsföring."
+            },
+            "correct_answer": "B",
+            "explanation": "När en artefakt publiceras blir enbart själva resultatet publikt; den privata konversationen och chattloggen förblir helt och hållet dolda för besökaren [25, 26]."
+        },
+        {
+            "id": 59,
+            "category": "Blandade Funktioner",
+            "question": "Vilka licenser inom Claude har tillgång till funktionen Skills för att skapa automatiserade procedurer?",
+            "options": {
+                "A": "Endast Gratis-versionen.",
+                "B": "Endast Enterprise.",
+                "C": "Betalande användare (Pro, Max, Team, Enterprise).",
+                "D": "Endast de som använder Claude via Slack."
+            },
+            "correct_answer": "C",
+            "explanation": "Skills är en kapacitet som finns tillgänglig för betalande användare över Pro, Max, Team och Enterprise-planerna [34, 75]."
+        },
+        {
+            "id": 60,
+            "category": "Blandade Funktioner",
+            "question": "Kan du ladda ner fungerande kod (t.ex. Python eller C++) direkt från en Artifact?",
+            "options": {
+                "A": "Ja, kodavsnitt kan enkelt granskas, kopieras eller laddas ner direkt från artefaktfönstret.",
+                "B": "Nej, Artifacts hanterar endast bilder.",
+                "C": "Nej, du måste be Claude skicka den som en e-post.",
+                "D": "Ja, men det kräver en Enterprise-server."
+            },
+            "correct_answer": "A",
+            "explanation": "Kodavsnitt i språk som Python, JS och C++ kan genereras som Artifacts och direkt granskas, kopieras och laddas ner av användaren [23, 28]."
+        },
+        {
+            "id": 61,
+            "category": "Modul 1: Modeller",
+            "question": "Vilka är de tre huvudmodellerna som Claude erbjuder?",
+            "options": {
+                "A": "Claude Chat, Claude Cowork och Claude Code",
+                "B": "Claude Free, Claude Pro och Claude Max",
+                "C": "Claude Haiku, Claude Sonnet och Claude Opus",
+                "D": "Claude Text, Claude Vision och Claude Audio"
+            },
+            "correct_answer": "A",
+            "explanation": "Claude Chat: Det klassiska konversationslagret som nås via webbläsaren eller appen. Claude Cowork : är arbetsflödeslagret, paketerat som en agentisk skrivbordsapp för icke-utvecklare. Claude Code:  är kodningslagret, ett terminalbaserat (CLI) agentverktyg specifikt byggt för mjukvaruutvecklare"
+        },
+        {
+            "id": 62,
+            "category": "Modul 5: Det agentiska skiftet",
+            "question": "Om du inte är en utvecklare, vilket är det bästa sättet att använda Claude-modellen för att hantera både resonemang och operativt arbete med lokala filer?",
+            "options": {
+                "A": "Endast Claude Code.",
+                "B": "Claude (webbchatten) i kombination med Claude Cowork.",
+                "C": "Claude Enterprise Search och Claude Code.",
+                "D": "Genom att enbart skriva anpassade skript i kommandotolken."
+            },
+            "correct_answer": "B",
+            "explanation": "För icke-utvecklare är den optimala lösningen att använda den vanliga Claude-chatten för strategiskt tänkande, rådgivning och textgenerering, kombinerat med Claude Cowork. Cowork fungerar som din operativa assistent och kan autonomt hantera filer, organisera mappar och automatisera uppgifter lokalt på din dator utan att du behöver kunna programmera [1-3]."
+        }
+    ]
+}

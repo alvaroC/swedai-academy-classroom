@@ -10,7 +10,8 @@ const COURSE_CATALOG = {
     'agent-builder': { id: 'agent-builder', name: 'ChatGPT Agent Builder', notebookId: '9e51ebda-3f78-42c0-bec4-3edfdb95864c' },
     'appar': { id: 'appar', name: 'ChatGPT Appar', notebookId: '67791935-df8f-4887-b0b3-60854c7ee533' },
     'atlas': { id: 'atlas', name: 'ChatGPT Atlas', notebookId: '011bf9d2-ab59-43d9-a0e8-755d21aa27df' },
-    'bygg-ai.förmåga': { id: 'bygg-ai.förmåga', name: 'Bygg AI förmåga', notebookId: '430716db-6060-4635-9cfc-9312866f3f0a' }
+    'bygg-ai.förmåga': { id: 'bygg-ai.förmåga', name: 'Bygg AI förmåga', notebookId: '430716db-6060-4635-9cfc-9312866f3f0a' },
+    'claude-mastery': { id: 'claue', name: 'Claude Mastery Program ', notebookId: '54308feb-c586-4100-adab-82aa24459f70' }
 };
 
 

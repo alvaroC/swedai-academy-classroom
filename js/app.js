@@ -5,19 +5,34 @@
 // ====================================================
 
 const COURSE_CATALOG = {
+    'chatgpt-mastery': { id: 'chatgpt-mastery', name: 'Introduktion till ChatGPT Mastery Program' },
     'intro-ai': { id: 'intro-ai', name: 'Introduktion till AI' },
     'prompt-eng': { id: 'prompt-eng', name: 'ChatGPT Prompt Engineering' },
     'deep-research': { id: 'deep-research', name: 'ChatGPT Deep Research' },
     'agent-läge': { id: 'agent-läge', name: 'ChatGPT Agentläge' },
     'gpt': { id: 'gpt', name: 'Skapa GPTs' },
     'agent-builder': { id: 'agent-builder', name: 'ChatGPT Agent Builder' },
+    'claude-mastery': { id: 'claude-mastery', name: 'Introduktion till Claude Mastery Program' },
     // Bygg AI Förmåga
     'system-processer': { id: 'system-processer', name: 'System och processer' },
     'informationslager': { id: 'informationslager', name: 'Informationslager' },
     'growth-marketing': { id: 'growth-marketing', name: 'Growth Marketing' },
 };
 
+function getCourseData(courseId) {
+    if (!window.notebookData) return null;
+    if (window.notebookData[courseId]) return window.notebookData[courseId];
+    
+    if (window.notebookData["ai-models"]) {
+        const models = window.notebookData["ai-models"];
+        if (models.chatgpt && models.chatgpt[courseId]) return models.chatgpt[courseId];
+        if (models.claude && models.claude[courseId]) return models.claude[courseId];
+    }
+    return null;
+}
+
 let currentCourseId = 'chatgpt-mastery';
+let currentCourseId2 = 'intro-ai';
 let currentByggCourseId = 'system-processer';
 
 // -------------------------------------------------------
@@ -110,8 +125,8 @@ const renderers = {
             </div>
         </div>`,
 
-    quiz: (data) => `
-        <div class="artifact-card-new quiz-container" id="quiz-area">
+    quiz: (data, activeCourseId = 'default') => `
+        <div class="artifact-card-new quiz-container" id="quiz-area-${activeCourseId}">
             ${artifactHead({
         icon: '<i class="fas fa-question-circle"></i>',
         label: 'QUIZ',
@@ -122,7 +137,7 @@ const renderers = {
         subtitleColor: 'rgba(255,220,160,0.85)'
     })}
             <div class="artifact-body" style="text-align:center;">
-                <button class="nav-btn active" onclick="loadActiveQuiz()" style="margin:0 auto;display:inline-flex;">Starta Quiz</button>
+                <button class="nav-btn active" onclick="loadActiveQuiz('${activeCourseId}')" style="margin:0 auto;display:inline-flex;">Starta Quiz</button>
             </div>
         </div>`,
 
@@ -399,18 +414,20 @@ function enrollmentBannerBygg(courseId, courseName) {
 
 
 // -------------------------------------------------------
-// LEFT COLUMN – Classroom course selector
+// LEFT COLUMN / RIGHT COLUMN – Classroom course selector
 // -------------------------------------------------------
-function selectCourse(courseId) {
-    currentCourseId = courseId;
+function selectCourse(courseId, column = 1) {
+    const isCol1 = column === 1;
+    if (isCol1) {
+        currentCourseId = courseId;
+    } else {
+        currentCourseId2 = courseId;
+    }
 
-    const nameEl = document.getElementById('active-course-name');
+    const nameEl = document.getElementById(isCol1 ? 'active-course-name' : 'active-course-name-2');
     if (nameEl && COURSE_CATALOG[courseId]) nameEl.innerText = COURSE_CATALOG[courseId].name;
 
-    const welcomeNameEl = document.getElementById('welcome-course-name');
-    if (welcomeNameEl && COURSE_CATALOG[courseId]) welcomeNameEl.innerText = `Välkommen till ${COURSE_CATALOG[courseId].name}`;
-
-    const grid = document.getElementById('gallery-grid');
+    const grid = document.getElementById(isCol1 ? 'gallery-grid' : 'gallery-grid-2');
     if (grid) {
         grid.innerHTML = `
         <div class="light-welcome-msg">
@@ -420,28 +437,31 @@ function selectCourse(courseId) {
         </div>`;
     }
 
-    const filterDrop = document.getElementById('content-filter-dropdown');
+    const filterDrop = document.getElementById(isCol1 ? 'content-filter-dropdown' : 'content-filter-dropdown-2');
     if (filterDrop) filterDrop.value = 'all';
 }
 
 // -------------------------------------------------------
-// LEFT COLUMN – Material gallery filter
+// LEFT COLUMN / RIGHT COLUMN – Material gallery filter
 // -------------------------------------------------------
-async function filterGallery(contentType) {
-    const grid = document.getElementById('gallery-grid');
+async function filterGallery(contentType, column = 1) {
+    const isCol1 = column === 1;
+    const gridId = isCol1 ? 'gallery-grid' : 'gallery-grid-2';
+    const grid = document.getElementById(gridId);
     if (!grid) return;
 
     grid.innerHTML = '';
     _enrollCounter = 0; // reset counter for fresh IDs
 
-    const courseData = window.notebookData ? window.notebookData[currentCourseId] : null;
+    const activeCourseId = isCol1 ? currentCourseId : currentCourseId2;
+    const courseData = getCourseData(activeCourseId);
 
     if (!courseData || Object.keys(courseData).length === 0) {
         grid.innerHTML = `
         <div class="light-welcome-msg">
             <div style="font-size:2.5rem;opacity:0.5;">🎯</div>
             <strong>Innehåll under utveckling</strong>
-            <span>Material för <em>${COURSE_CATALOG[currentCourseId]?.name}</em> kommer snart!</span>
+            <span>Material för <em>${COURSE_CATALOG[activeCourseId]?.name || activeCourseId}</em> kommer snart!</span>
         </div>`;
         return;
     }
@@ -449,16 +469,16 @@ async function filterGallery(contentType) {
     const keysToSkip = ['title', 'updates', 'exercises'];
     const keys = Object.keys(courseData).filter(k => !keysToSkip.includes(k));
     let hasContent = false;
-    const courseName = COURSE_CATALOG[currentCourseId]?.name || currentCourseId;
+    const courseName = COURSE_CATALOG[activeCourseId]?.name || activeCourseId;
 
     for (const key of keys) {
         if (contentType !== 'all' && contentType !== key) continue;
         if (!renderers[key]) continue;
         try {
-            const html = await renderers[key](courseData[key]);
+            const html = await renderers[key](courseData[key], activeCourseId);
             grid.insertAdjacentHTML('beforeend', html);
             // 👉 Lägg till enrollment-banners efter varje artefakt
-            grid.insertAdjacentHTML('beforeend', enrollmentBannerClassroom(currentCourseId, courseName));
+            grid.insertAdjacentHTML('beforeend', enrollmentBannerClassroom(activeCourseId, courseName));
             hasContent = true;
         } catch (e) {
             console.error(`Render error for "${key}":`, e);
@@ -504,7 +524,7 @@ window.filterByggGallery = async function (contentType) {
     grid.innerHTML = '';
     _enrollCounter = 0;
 
-    const courseData = window.notebookData ? window.notebookData[currentByggCourseId] : null;
+    const courseData = getCourseData(currentByggCourseId);
 
     if (!courseData || Object.keys(courseData).length === 0) {
         grid.innerHTML = `
@@ -525,7 +545,7 @@ window.filterByggGallery = async function (contentType) {
         if (contentType !== 'all' && contentType !== key) continue;
         if (!renderers[key]) continue;
         try {
-            const html = await renderers[key](courseData[key]);
+            const html = await renderers[key](courseData[key], currentByggCourseId);
             // Wrap in dark-styled container
             grid.insertAdjacentHTML('beforeend', `
             <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:1rem;color:rgba(255,255,255,0.9); margin-bottom: 2rem;">
@@ -557,8 +577,9 @@ window.activeQuizModules = [];
 window.quizScore = 0;
 window.quizTotal = 0;
 
-window.loadActiveQuiz = async function () {
-    const courseData = window.notebookData ? window.notebookData[currentCourseId] : null;
+window.loadActiveQuiz = async function (clickedCourseId) {
+    const courseIdToLoad = clickedCourseId || currentCourseId;
+    const courseData = getCourseData(courseIdToLoad);
     const quizInfo = courseData ? courseData.quiz : null;
     if (!quizInfo || !quizInfo.quizUrl) { alert('Quiz-filen saknas.'); return; }
 
@@ -595,17 +616,17 @@ window.loadActiveQuiz = async function () {
         window.quizTotal = 0;
 
         if (modules.length > 0 && modules[0].questions.length > 0) {
-            window.renderQuizQuestion(0, 0);
+            window.renderQuizQuestion(0, 0, courseIdToLoad);
         } else {
             console.error('Quiz data saknar frågor eller moduler.', quizData);
         }
     } catch (e) { console.error('Quiz load error:', e); }
 };
 
-window.renderQuizQuestion = function (mIdx, qIdx) {
+window.renderQuizQuestion = function (mIdx, qIdx, activeCourseId) {
     const module = window.activeQuizModules[mIdx];
     const question = module.questions[qIdx];
-    const area = document.querySelector('.quiz-container') || document.getElementById('quiz-area');
+    const area = document.getElementById(`quiz-area-${activeCourseId}`) || document.querySelector('.quiz-container');
     if (!area) return;
 
     area.innerHTML = `
@@ -617,17 +638,17 @@ window.renderQuizQuestion = function (mIdx, qIdx) {
         <h2 class="quiz-question-text">${question.question}</h2>
         <div class="quiz-options-grid">
             ${question.options.map((opt, i) => `
-                <button class="quiz-option-btn" onclick="submitQuizAnswer(${mIdx},${qIdx},${i})">${opt}</button>
+                <button class="quiz-option-btn" onclick="submitQuizAnswer(${mIdx},${qIdx},${i},'${activeCourseId}')">${opt}</button>
             `).join('')}
         </div>
-        <div id="quiz-feedback" style="margin-top:0.8rem;"></div>
+        <div id="quiz-feedback-${activeCourseId}" style="margin-top:0.8rem;"></div>
     </div>`;
 };
 
-window.submitQuizAnswer = function (mIdx, qIdx, selectedIdx) {
+window.submitQuizAnswer = function (mIdx, qIdx, selectedIdx, activeCourseId) {
     const module = window.activeQuizModules[mIdx];
     const question = module.questions[qIdx];
-    const fb = document.getElementById('quiz-feedback');
+    const fb = document.getElementById(`quiz-feedback-${activeCourseId}`) || document.getElementById('quiz-feedback');
     const isCorrect = selectedIdx === question.correct_answer_index;
 
     if (fb.getAttribute('data-answered') === 'true') return;
@@ -647,7 +668,7 @@ window.submitQuizAnswer = function (mIdx, qIdx, selectedIdx) {
                      </div>`;
         }
 
-        html += `<button class="nav-btn active" onclick="window.nextQuizQuestion(${mIdx}, ${qIdx})" style="padding:0.6rem 1.2rem;">Nästa →</button>`;
+        html += `<button class="nav-btn active" onclick="window.nextQuizQuestion(${mIdx}, ${qIdx}, '${activeCourseId}')" style="padding:0.6rem 1.2rem;">Nästa →</button>`;
         fb.innerHTML = html;
 
         const optionsGrid = fb.previousElementSibling;
@@ -669,20 +690,20 @@ window.submitQuizAnswer = function (mIdx, qIdx, selectedIdx) {
     }
 }
 
-window.nextQuizQuestion = function (mIdx, qIdx) {
+window.nextQuizQuestion = function (mIdx, qIdx, activeCourseId) {
     const module = window.activeQuizModules[mIdx];
     if (qIdx + 1 < module.questions.length) {
-        renderQuizQuestion(mIdx, qIdx + 1);
+        renderQuizQuestion(mIdx, qIdx + 1, activeCourseId);
     } else if (mIdx + 1 < window.activeQuizModules.length) {
-        renderQuizQuestion(mIdx + 1, 0);
+        renderQuizQuestion(mIdx + 1, 0, activeCourseId);
     } else {
-        const area = document.querySelector('.quiz-active-card');
+        const area = document.getElementById(`quiz-area-${activeCourseId}`) || document.querySelector('.quiz-container');
         if (area) area.innerHTML = `
             <div style="text-align:center;padding:2rem 0.5rem;">
                 <div style="font-size:3rem;margin-bottom:0.8rem;">🎉</div>
                 <h2 style="font-size:1.2rem;">Quiz slutfört!</h2>
                 <p style="font-size:1rem;margin:0.8rem 0;">Du fick <strong>${window.quizScore} av ${window.quizTotal}</strong> rätt</p>
-                <button class="btn-primary" onclick="loadActiveQuiz()" style="margin-top:0.8rem;">Försök igen</button>
+                <button class="btn-primary" onclick="loadActiveQuiz('${activeCourseId}')" style="margin-top:0.8rem;">Försök igen</button>
             </div>`;
         window.quizScore = 0;
         window.quizTotal = 0;
