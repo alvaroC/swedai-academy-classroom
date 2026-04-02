@@ -22,7 +22,7 @@ const COURSE_CATALOG = {
 function getCourseData(courseId) {
     if (!window.notebookData) return null;
     if (window.notebookData[courseId]) return window.notebookData[courseId];
-    
+
     if (window.notebookData["ai-models"]) {
         const models = window.notebookData["ai-models"];
         if (models.chatgpt && models.chatgpt[courseId]) return models.chatgpt[courseId];
@@ -336,11 +336,11 @@ function enrollmentBannerClassroom(courseId, courseName) {
                 VILL DU BLI AI-PROFFS?
             </h2>
             <p class="enroll-body">
-                Denna <strong>"Nivå 1" </strong> är gratis men det finns ytterligare 5 nivåer inom CharGPT Mastery programmet som hjälper dig att utveckla din AI-professionella
+                Denna <strong>"Nivå 1" </strong> är gratis men det finns ytterligare 5 nivåer inom Mastery programmet som hjälper dig att utveckla din AI-professionella
                 kompetens på ett strukturerat och effektivt sätt.
             </p>
             <p class="enroll-cta-text">
-                <strong>"ChatGPT Mastery Program"</strong> lanseras snart. Anmäl dig till programmet:
+                <strong>"ChatGPT & Claude Mastery Program"</strong> lanseras snart. Anmäl dig till programmet:
             </p>
             <div class="enroll-form-row">
                 <label class="enroll-label" for="${uid}">Ange din e-postadress.</label>
@@ -377,7 +377,7 @@ function enrollmentBannerBygg(courseId, courseName) {
                 VILL DU TÄNKA SOM EN AI-STRATEG?
             </h2>
             <p class="enroll-body">
-                I nivåerna 1–4 lär du dig hur ChatGPT-ekosystemet fungerar. I nivå 5 (AI-konsult) lär du dig hur detta
+                I nivåerna 1–4 lär du dig hur ChatGPT & Claude-ekosystemet fungerar. I nivå 5 (AI-konsult) lär du dig hur dessa
                  ekosystem kan användas i praktiken för att lösa verkliga problem. I denna nivå 6, som kompletterar de tidigare
                   nivåerna, tar du nästa steg </p>
 
@@ -387,7 +387,7 @@ function enrollmentBannerBygg(courseId, courseName) {
                   framtidens utmaningar, både som kunskapsarbetare eller som entreprenör                
             </p>
             <p class="enroll-cta-text">
-                <strong>"ChatGPT Mastery Program"</strong> lanseras snart. Anmäl dig till programmet:
+                <strong>"ChatGPT & Claude Mastery Program"</strong> lanseras snart. Anmäl dig till programmet:
             </p>
             <div class="enroll-form-row">
                 <label class="enroll-label" for="${uid}">Ange din e-postadress.</label>
