@@ -101,13 +101,10 @@ function buildEmailHtml(email: string): string {
                                 Du är anmäld! 🎉
                             </h2>
                             <p style="margin:0 0 16px;font-size:0.95rem;color:#334155;line-height:1.7;">
-                                Tack för ditt intresse för <strong>ChatGPT Mastery Program</strong>!
-                                Vi meddelar dig så snart programmet lanseras.
+                                Tack för ditt intresse för att lära dig mer om AI!
+                                
                             </p>
-                            <p style="margin:0 0 24px;font-size:0.95rem;color:#334155;line-height:1.7;">
-                                Som en av de <strong>20 första anmälda</strong> är du berättigad till
-                                <strong style="color:#D91B24;">16&nbsp;% Early Bird-rabatt</strong> på hela programmet.
-                            </p>
+                            
 
                             <!-- AUDIO PLAYER CARD -->
                             <table width="100%" cellpadding="0" cellspacing="0" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:20px;margin:24px 0;width:100%;max-width:100%;">
@@ -119,7 +116,7 @@ function buildEmailHtml(email: string): string {
                                     </td>
                                     <td style="padding-left:16px;vertical-align:middle;text-align:left;">
                                         <div style="font-size:0.95rem;font-weight:700;color:#0f172a;margin-bottom:2px;">
-                                            Under tiden du väntar på programmet, lyssna gärna på denna Podcast: "Nivå 6 från ChatGPT Mastery Program" 🎧
+                                            Här kommer mer om AI: lyssna gärna på denna Podcast: "Nivå 6 från AI Learning Hub" 🎧
                                         </div>
                                         <div style="font-size:0.75rem;color:#64748b;margin-bottom:8px;">
                                             Klicka för att spela audio (m4a)

@@ -1016,7 +1016,7 @@ h3 {
    ============================================ */
 
 .classroom-intro {
-    background: #ffffff;
+    background: #000;
     /* Rent vitt för att det ska poppa mot den ljusgrå bakgrunden */
     padding: 3.5rem 2rem 2.5rem;
     text-align: center;
@@ -1073,9 +1073,9 @@ h3 {
 
 .intro-title {
     font-family: 'Outfit', sans-serif;
-    font-size: 1.7rem;
+    font-size: 1.9rem;
     font-weight: 800;
-    color: #1e3a8a;
+    color: #059669;
     margin-bottom: 1rem;
     letter-spacing: -0.5px;
     text-transform: uppercase;
@@ -1097,8 +1097,8 @@ h3 {
 .intro-text p {
     font-family: 'Inter', sans-serif;
     font-size: 0.95rem;
-    /* Mindre textstorlek som önskat */
-    color: #475569;
+    font-weight: bold;
+    color: #cbd5e1;
     line-height: 1.7;
     margin-bottom: 0;
     max-width: 700px;

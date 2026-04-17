@@ -333,34 +333,27 @@ function enrollmentBannerClassroom(courseId, courseName) {
     <div class="enroll-banner">
         <div class="enroll-banner-inner">
             <h2 class="enroll-title">
-                VILL DU BLI AI-PROFFS?
-            </h2>
-            <p class="enroll-body">
-                Denna <strong>"Nivå 1" </strong> är gratis men det finns ytterligare 5 nivåer inom Mastery programmet som hjälper dig att utveckla din AI-professionella
-                kompetens på ett strukturerat och effektivt sätt.
-            </p>
-            <p class="enroll-cta-text">
-                <strong>"ChatGPT & Claude Mastery Program"</strong> lanseras snart. Anmäl dig till programmet:
-            </p>
-            <div class="enroll-form-row">
+                VILL DU LÄRA DIG MER OM AI?
+            </h2>                     
+            
+              <div class="enroll-form-row">
                 <label class="enroll-label" for="${uid}">Ange din e-postadress.</label>
                 <div class="enroll-input-group">
                     <input
                         id="${uid}"
                         type="email"
                         class="enroll-input"
-                        placeholder="din@email.se"
-                    >
+                        placeholder="din@email.se">
                     <button
                         class="enroll-btn"
                         onclick="handleEnrollSubmit(this, '${uid}', '${courseId}', '${courseName}')"
                     >Skicka</button>
                 </div>
                 <p id="${uid}-feedback" class="enroll-feedback"></p>
-            </div>
-            <p class="enroll-note">
-                <strong>OBS: De 20 första anmälda får 15 % rabatt. Erbjudandet är tidsbegränsat.</strong>
-            </p>
+            </div>            
+
+   
+
         </div>
     </div>`;
 }
@@ -375,11 +368,7 @@ function enrollmentBannerBygg(courseId, courseName) {
         <div class="enroll-banner-inner">
             <h2 class="enroll-title">
                 VILL DU TÄNKA SOM EN AI-STRATEG?
-            </h2>
-            <p class="enroll-body">
-                I nivåerna 1–4 lär du dig hur ChatGPT & Claude-ekosystemet fungerar. I nivå 5 (AI-konsult) lär du dig hur dessa
-                 ekosystem kan användas i praktiken för att lösa verkliga problem. I denna nivå 6, som kompletterar de tidigare
-                  nivåerna, tar du nästa steg </p>
+            </h2>            
 
              <p class="enroll-body">      
                   Nivån 6 handlar om att tänka som en AI-strateg – ett sätt att förstå 
@@ -387,7 +376,7 @@ function enrollmentBannerBygg(courseId, courseName) {
                   framtidens utmaningar, både som kunskapsarbetare eller som entreprenör                
             </p>
             <p class="enroll-cta-text">
-                <strong>"ChatGPT & Claude Mastery Program"</strong> lanseras snart. Anmäl dig till programmet:
+                Vill du veta mer AI som strategi? Ange din e-postadress nedan:
             </p>
             <div class="enroll-form-row">
                 <label class="enroll-label" for="${uid}">Ange din e-postadress.</label>
@@ -405,9 +394,7 @@ function enrollmentBannerBygg(courseId, courseName) {
                 </div>
                 <p id="${uid}-feedback" class="enroll-feedback"></p>
             </div>
-            <p class="enroll-note">
-                <strong>OBS: De 20 första anmälda får 15 % rabatt. Erbjudandet är tidsbegränsat.</strong>
-            </p>
+           
         </div>
     </div>`;
 }
