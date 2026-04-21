@@ -333,7 +333,7 @@ function enrollmentBannerClassroom(courseId, courseName) {
     <div class="enroll-banner">
         <div class="enroll-banner-inner">
             <h2 class="enroll-title">
-                VILL DU LÄRA DIG MER OM AI?
+                VILL DU LÄRA DIG MER OM AI LEARNING HUB?
             </h2>                     
             
               <div class="enroll-form-row">
